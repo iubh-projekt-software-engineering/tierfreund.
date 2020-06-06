@@ -1,0 +1,90 @@
+.onboarding--stage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+
+    [data-stepmation-item] {
+        transition: opacity 1s;
+        opacity: 0;
+    }
+
+    .stepmation--active {
+        opacity: 1;
+    }
+
+}
+.onboarding--stage_item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    display: none;
+}
+.onboarding--stage .image {
+    width: 100%;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.onboarding--stage img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+.onboarding--stage .title {
+    font-size: 50px;
+    @include bold;
+}
+.onboarding--stage .subtitle {
+    font-size: 22px;
+    @include bold;
+}
+.onboarding--stage_controller {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.onboarding--stage_steps {
+    display: flex;
+}
+.onboarding--stage_step {
+    background-color: $black;
+    border-radius: 4px;
+    height: 8px;
+    width: 8px;
+    margin-right: 8px;
+    transition: all 1s ease;
+
+    &.is--active {
+        width: 24px;
+        
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.onboarding--stage_next {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $black;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+    }
+}
