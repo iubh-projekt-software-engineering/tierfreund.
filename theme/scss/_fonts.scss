@@ -1,0 +1,47 @@
+@mixin bold {
+    font-family: sofia-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;    
+}
+
+@mixin bold_italic {
+    font-family: sofia-pro, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+@mixin regular {
+    font-family: sofia-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;    
+}
+
+@mixin regular_italic {
+    font-family: sofia-pro, sans-serif;
+    font-weight: 400;
+    font-style: italic;    
+}
+
+@mixin soft_bold {
+    font-family: sofia-pro-soft, sans-serif;
+    font-weight: 700;
+    font-style: normal;    
+}
+
+@mixin soft_bold_italic {
+    font-family: sofia-pro-soft, sans-serif;
+    font-weight: 700;
+    font-style: italic;    
+}
+
+@mixin soft_regular {
+    font-family: sofia-pro-soft, sans-serif;
+    font-weight: 400;
+    font-style: normal;    
+}
+
+@mixin soft_regular_italic {
+    font-family: sofia-pro-soft, sans-serif;
+    font-weight: 400;
+    font-style: italic;    
+}
