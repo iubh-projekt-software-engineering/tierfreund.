@@ -1,0 +1,46 @@
+<div class="onboarding--stage">
+
+    <div class="onboarding--stage_wrapper">
+
+        <div class="onboarding--stage_item" data-stepmation-container data-stepmation-item>
+            <div class="image">
+                <img data-stepmation-item src="{{ url_for('static', filename='stage-1.svg') }}" alt="Deine besten Freunde" />
+            </div>
+            <div class="text">
+                <h1 class="title">{{ config['APP_NAME'] }}</h1>
+                <h3 class="subtitle">Die Gesundheitsapp für deine besten Freunde.</h3>
+            </div>
+        </div>
+
+        <div class="onboarding--stage_item" data-stepmation-container data-stepmation-item>
+            <div class="image">
+                <img data-stepmation-item src="{{ url_for('static', filename='stage-2.svg') }}" alt="Die wichtigsten Infos" />
+            </div>
+            <div class="text">
+                <h2 class="title">An einem Ort.</h2>
+                <h3 class="subtitle">Speichere alle wichtigen Informationen rund um deine Liebsten vierbeinigen Freunde an einem Ort ab.</h3>
+            </div>
+        </div>
+
+        <div class="onboarding--stage_item" data-stepmation-container data-stepmation-item>
+            <div class="image">
+                <img data-stepmation-item src="{{ url_for('static', filename='stage-3.svg') }}" alt="Mitgedacht" />
+            </div>
+            <div class="text">
+                <h2 class="title">Mitgedacht.</h2>
+                <h3 class="subtitle">Verpasse nie wieder einen Impftermin, eine Wurmkur oder andere wichtige Termine rund um deine vierbeinigen Freunde.</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="onboarding--stage_controller">
+        <div class="onboarding--stage_steps">
+            <div class="onboarding--stage_step is--active"></div>
+            <div class="onboarding--stage_step"></div>
+            <div class="onboarding--stage_step"></div>
+        </div>
+        <div class="onboarding--stage_next"><img src="{{ url_for('static', filename='arrow-right.svg') }}" /></div>
+    </div>
+
+</div>
