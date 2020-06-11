@@ -43,6 +43,14 @@
   }
 
   .form-inputs {
+    input {
+      width: 342px;
+      height: 60px;
+
+      border: 1px solid #323434;
+      border-radius: 11px;
+      opacity: 1;
+    }
     .submit {
       background-color: $black;
       color: $white;
