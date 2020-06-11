@@ -14,9 +14,33 @@
   background-size: cover;
 }
 
+.login-text {
+  margin-top: 128px;
+  color: $white;
+
+  .login-title {
+    font-size: 60px;
+  }
+
+  .login-subtitle {
+    font-size: 22px;
+  }
+}
+
 .form-container {
   background-color: $white;
-  margin-top: 190px;
+  color: $black;
+  margin-top: 130px;
   height: 100%;
   border-radius: 60px 60px 0px 0px;
+
+  .form-text {
+    padding-top: 67px;
+  }
+
+  .form-inputs {
+    // border: 1px solid #323434;
+    // border-radius: 11px;
+    // opacity: 1;
+  }
 }
