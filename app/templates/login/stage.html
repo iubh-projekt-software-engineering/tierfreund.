@@ -1,16 +1,23 @@
 {% block body %}
-  <div class="form-container">
-    <div class="form-text">
-      <h2 class="form-title">Anmelden.</h2>
-      <h3 class="form-subtitle">Melde dich jetzt bei Tierfreund an.</h3>
-    </div>
-    <div class="form-inputs">
-      <form action="{{ url_for('login.index') }}" method="POST">
-        <input name="username" type="text" value="E-Mail" />
-        <input name="password" type="password" />
-        <input type="submit" value="Anmelden" />
-      </form>
+  <div class="login-canvas">
+    <div class="form-container">
+      <div class="form-text">
+        <h2 class="form-title">Anmelden.</h2>
+        <h3 class="form-subtitle">Melde dich jetzt bei Tierfreund an.</h3>
+      </div>
+      <div class="form-inputs">
+        <form action="{{ url_for('login.index') }}" method="POST">
+          <input name="username" type="text" value="E-Mail" />
+          <input name="password" type="password" />
+          <input type="submit" value="Anmelden" />
+        </form>
+      </div>
+      <div class="registration-container">
+        <div class="registration-text">
+          <h4 class="registration-title">Du hast noch kein Konto bei Tierfreund?</h4>
+          <h4 class="registration-subtitle"><a href="">Registriere</a> dich jetzt kostenlos.</h4>
+        </div>
+      </div>
     </div>
   </div>
-
 {% endblock %}
