@@ -36,11 +36,16 @@
 
   .form-text {
     padding-top: 67px;
+
+    .form-subtitle {
+      padding-bottom: 50px;
+    }
   }
 
   .form-inputs {
-    // border: 1px solid #323434;
-    // border-radius: 11px;
-    // opacity: 1;
+    .submit {
+      background-color: $black;
+      color: $white;
+    }
   }
 }
