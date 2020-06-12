@@ -16,8 +16,10 @@
       <div class="form-inputs">
         <form action="{{ url_for('login.index') }}" method="POST">
           <input class="username" name="username" type="text" placeholder="E-Mail" /><br />
-          <input class="password" id="typepass" name="password" type="text" placeholder="Passwort" /><br />
-          <input class="password-checkbox" id="password-checkbox" type="checkbox" onclick="passwordToggle()"><br />
+          <div class="password-container">
+            <input class="password" id="typepass" name="password" type="password" placeholder="Passwort" />
+            <i class="fas fa-eye icon" onclick="passwordToggle()"></i>
+          </div><br />
           <input class="submit" type="submit" value="Anmelden" />
         </form>
       </div>
