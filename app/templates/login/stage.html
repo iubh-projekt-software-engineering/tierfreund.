@@ -16,8 +16,8 @@
       <div class="form-inputs">
         <form action="{{ url_for('login.index') }}" method="POST">
           <input class="username" name="username" type="text" value="E-Mail" /><br />
-          <input class="password" name="password" type="password" /><br />
-          <input class="password-checkbox" name="password-checkbox" type="checkbox" onclick="passwordToggle()"><br />
+          <input class="password" id="typepass" name="password" type="password" /><br />
+          <input class="password-checkbox" id="password-checkbox" type="checkbox" onclick="passwordToggle()"><br />
           <input class="submit" type="submit" value="Anmelden" /><br />
         </form>
       </div>
@@ -31,7 +31,13 @@
   </div>
   <script type="text/javascript">
     function passwordToggle() {
-      
+      var temp = document.getElementById("typepass");
+      if (temp.type === "password") {
+        temp.type = "text";
+      }
+      else {
+        temp.type = "password";
+      }
     }
   </script>
 {% endblock %}
