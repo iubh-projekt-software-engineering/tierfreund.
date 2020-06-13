@@ -18,7 +18,7 @@
           <input class="username" name="username" type="text" placeholder="E-Mail" /><br />
           <div class="password-container">
             <input class="password" id="typepass" name="password" type="password" placeholder="Passwort" />
-            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" /></span>
+            <span onclick="passwordToggle()" class="fa fa-fw fa-eye field-icon toggle-password" /></span>
           </div><br />
           <input class="submit" type="submit" value="Anmelden" />
         </form>
@@ -32,7 +32,7 @@
     </div>
   </div>
   <script type="text/javascript">
-    /*function passwordToggle() {
+    function passwordToggle() {
       var temp = document.getElementById("typepass");
       if (temp.type === "password") {
         temp.type = "text";
@@ -40,7 +40,8 @@
       else {
         temp.type = "password";
       }
-    }*/
+    };
+
     $(".toggle-password").click(function() {
       $(this).toggleClass("fa-eye fa-eye-slash");
       var input = $($(this).attr("toggle"));
