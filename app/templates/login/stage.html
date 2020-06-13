@@ -17,8 +17,8 @@
         <form action="{{ url_for('login.index') }}" method="POST">
           <input class="username" name="username" type="text" placeholder="E-Mail" /><br />
           <div class="password-container">
-            <input class="password" id="typepass" name="password" type="password" placeholder="Passwort" />
-            <span onclick="passwordToggle()" class="fa fa-fw fa-eye field-icon toggle-password" /></span>
+            <input class="password" id="typepass" name="password" type="password" placeholder="Passwort" /><br />
+            <span onclick="passwordToggle()" class="fa fa-fw fa-eye icon" /></span>
           </div><br />
           <input class="submit" type="submit" value="Anmelden" />
         </form>
@@ -33,6 +33,7 @@
   </div>
   <script type="text/javascript">
     function passwordToggle() {
+      this.toggleClass("fa-eye fa-eye-slash");
       var temp = document.getElementById("typepass");
       if (temp.type === "password") {
         temp.type = "text";
@@ -41,16 +42,5 @@
         temp.type = "password";
       }
     };
-
-    $(".toggle-password").click(function() {
-      $(this).toggleClass("fa-eye fa-eye-slash");
-      var input = $($(this).attr("toggle"));
-
-      if (input.attr("type") == "password") {
-        input.attr("type", "text");
-      } else {
-        input.attr("type", "password");
-      }
-    });
   </script>
 {% endblock %}
