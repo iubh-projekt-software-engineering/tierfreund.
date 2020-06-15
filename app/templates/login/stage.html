@@ -34,7 +34,7 @@
   <script type="text/javascript">
     function passwordToggle() {
       this.toggleClass("fa-eye fa-eye-slash");
-      var temp = document.getElementById("typepass");
+      let temp = document.querySelector(".typepass");
       if (temp.type === "password") {
         temp.type = "text";
       }
