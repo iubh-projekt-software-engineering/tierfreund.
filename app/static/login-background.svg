@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="515.348" height="938.828" viewBox="0 0 515.348 938.828">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #20ab62;
+      }
+
+      .cls-2 {
+        opacity: 0.1;
+      }
+
+      .cls-3 {
+        fill: #dfffef;
+      }
+    </style>
+  </defs>
+  <g id="Gruppe_467" data-name="Gruppe 467" transform="translate(0 42.828)">
+    <rect id="Rechteck_37" data-name="Rechteck 37" class="cls-1" width="414" height="896"/>
+    <g id="Gruppe_215" data-name="Gruppe 215" class="cls-2" transform="translate(0 241.197) rotate(-60)">
+      <ellipse id="Ellipse_1" data-name="Ellipse 1" class="cls-3" cx="71.479" cy="50.002" rx="71.479" ry="50.002" transform="matrix(0.128, -0.992, 0.992, 0.128, 139.579, 141.787)"/>
+      <ellipse id="Ellipse_2" data-name="Ellipse 2" class="cls-3" cx="50.002" cy="71.479" rx="50.002" ry="71.479" transform="translate(0 48.624) rotate(-22.658)"/>
+      <ellipse id="Ellipse_3" data-name="Ellipse 3" class="cls-3" cx="71.479" cy="50.002" rx="71.479" ry="50.002" transform="translate(227.463 148.724) rotate(-42.658)"/>
+      <ellipse id="Ellipse_4" data-name="Ellipse 4" class="cls-3" cx="71.479" cy="50.002" rx="71.479" ry="50.002" transform="matrix(0.976, -0.219, 0.219, 0.976, 295.341, 218.545)"/>
+      <path id="Pfad_94" data-name="Pfad 94" class="cls-3" d="M-31.331,202.215c-6.839-10.242-19.232-30.3-23.871-47.431-2.491-23.383-14.693-43.926-34.95-54.4-18.478-9.555-39.919-8.793-59.12.13V100.5c-.125.064-.26.122-.388.186-.147.069-.3.139-.443.211-17.8,8.527-48.135,9.948-60.447,10.159-1.765-.058-3.533-.053-5.3.03l-.133,0,0,.011c-27,1.314-54.262,19.019-69.265,48.03-21.072,40.756-9.979,88.361,24.777,106.333a63.167,63.167,0,0,0,39.9,5.911v0s31.051,3.835,66.3,34.282h0a63.176,63.176,0,0,0,27.889,29.139c34.756,17.974,80.015-.5,101.087-41.249C-8.674,261.39-12.085,224.98-31.331,202.215Z" transform="translate(313.862 80.641)"/>
+    </g>
+  </g>
+</svg>
