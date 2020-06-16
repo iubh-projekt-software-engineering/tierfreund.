@@ -20,8 +20,8 @@
           <form action="{{ url_for('login.index') }}" method="POST">
             <input class="username" name="username" type="text" placeholder="E-Mail" /><br />
             <div class="password-container">
-              <input class="password" id="typepass" name="password" type="password" placeholder="Passwort" /><br />
-              <span onclick="passwordToggle()" class="fa fa-fw fa-eye icon" /></span>
+              <input class="password" name="password" type="password" placeholder="Passwort" />
+              <span onclick="passwordToggle()" class="eye-icon" /></span>
             </div><br />
             <input class="submit" type="submit" value="Anmelden" />
           </form>
@@ -29,7 +29,7 @@
         <div class="registration-container">
           <div class="registration-text">
             <div class="registration-title">Du hast noch kein Konto bei Tierfreund?</div>
-            <div class="registration-subtitle"><a href="https://cod.tracker.gg/warzone/profile/battlenet/kraemer64%232856/overview">Registriere</a> dich jetzt kostenlos.</div>
+            <div class="registration-subtitle"><a href="{{ url_for('login.index')}}">Registriere</a> dich jetzt kostenlos.</div>
           </div>
         </div>
       </div>
@@ -37,8 +37,8 @@
   </div>
   <script type="text/javascript">
     function passwordToggle() {
-      this.toggleClass("fa-eye fa-eye-slash");
-      let temp = document.querySelector(".typepass");
+      //this.toggleClass("fa-eye fa-eye-slash"); TODO: Das eye icon wird noch nicht geladen
+      let temp = document.querySelector(".password");
       if (temp.type === "password") {
         temp.type = "text";
       }
