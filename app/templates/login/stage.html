@@ -1,32 +1,36 @@
 {% block body %}
   <div class="login-canvas">
-    <div class="login-text">
-      <div class="login-title">
-        Tierfreund.
-      </div>
-      <div class="login-subtitle">
-        Die Health Care für deine Haustiere
+    <div class="content-title">
+      <div class="login-text">
+        <div class="login-title">
+          Tierfreund.
+        </div>
+        <div class="login-subtitle">
+          Die Health Care für deine Haustiere
+        </div>
       </div>
     </div>
-    <div class="form-container">
-      <div class="form-text">
-        <h2 class="form-title">Anmelden.</h2>
-        <h3 class="form-subtitle">Melde dich jetzt bei Tierfreund an.</h3>
-      </div>
-      <div class="form-inputs">
-        <form action="{{ url_for('login.index') }}" method="POST">
-          <input class="username" name="username" type="text" placeholder="E-Mail" /><br />
-          <div class="password-container">
-            <input class="password" id="typepass" name="password" type="password" placeholder="Passwort" /><br />
-            <span onclick="passwordToggle()" class="fa fa-fw fa-eye icon" /></span>
-          </div><br />
-          <input class="submit" type="submit" value="Anmelden" />
-        </form>
-      </div>
-      <div class="registration-container">
-        <div class="registration-text">
-          <div class="registration-title">Du hast noch kein Konto bei Tierfreund?</div>
-          <div class="registration-subtitle"><a href="https://cod.tracker.gg/warzone/profile/battlenet/kraemer64%232856/overview">Registriere</a> dich jetzt kostenlos.</div>
+    <div class="content-form">
+      <div class="form-container">
+        <div class="form-text">
+          <h2 class="form-title">Anmelden.</h2>
+          <h3 class="form-subtitle">Melde dich jetzt bei Tierfreund an.</h3>
+        </div>
+        <div class="form-inputs">
+          <form action="{{ url_for('login.index') }}" method="POST">
+            <input class="username" name="username" type="text" placeholder="E-Mail" /><br />
+            <div class="password-container">
+              <input class="password" id="typepass" name="password" type="password" placeholder="Passwort" /><br />
+              <span onclick="passwordToggle()" class="fa fa-fw fa-eye icon" /></span>
+            </div><br />
+            <input class="submit" type="submit" value="Anmelden" />
+          </form>
+        </div>
+        <div class="registration-container">
+          <div class="registration-text">
+            <div class="registration-title">Du hast noch kein Konto bei Tierfreund?</div>
+            <div class="registration-subtitle"><a href="https://cod.tracker.gg/warzone/profile/battlenet/kraemer64%232856/overview">Registriere</a> dich jetzt kostenlos.</div>
+          </div>
         </div>
       </div>
     </div>
