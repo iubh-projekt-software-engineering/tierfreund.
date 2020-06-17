@@ -4,8 +4,11 @@
 @import 'fonts';
 @import 'colors';
 
-
 @import 'globals';
 
+@import '_components/button';
+@import '_components/bottom-container';
+@import '_components/input';
+
 @import '_modules/onboarding';
-@import '_components/login';
+@import '_modules/guide-module';

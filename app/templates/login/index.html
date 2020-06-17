@@ -1,7 +1,20 @@
 {% extends 'base.html' %}
+{% from 'macros/form.html' import text, password %}
 
 {% block body %}
 
-  {% include 'login/stage.html' %}
+  <div class="bottom-container">
+    <h3 class="title">Tierfreund.</h3>
+    <p class="text">Die Health Care für deine Haustiere</p>
+
+    <form action="{{ url_for('login.index') }}" method="POST">
+      {{ text('email', 'E-Mail Adresse eingeben') }}
+      {{ password() }}
+      <input class="submit" type="submit" value="Anmelden" />
+    </form>
+
+  </div>
+
+
 
 {% endblock %}

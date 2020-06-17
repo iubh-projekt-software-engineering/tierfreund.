@@ -1,0 +1,20 @@
+.bottom-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+  padding: 60px 40px;
+  z-index: 99;
+  text-align: center;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+}
+.bottom-container .title {
+  font-size: 40px;
+  @include bold;
+}
+.bottom-container .text {
+  font-size: 18px;
+  margin-bottom: 50px;
+}
