@@ -1,3 +1,8 @@
+.form-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
 input[type="text"],
 input[type="password"] {
   border-width: 1px;
@@ -10,13 +15,13 @@ input[type="password"] {
   font-size: 18px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 20px;
 
   &::placeholder {
     opacity: 1;
     color: $black;
   }
 }
+
 
 input[type="password"] {
   padding-right: 60px;
@@ -27,11 +32,9 @@ input[type="submit"] {
   font-size: 20px;
 }
 
-.password-field {
-  position: relative;
-}
 .js--password-toggler {
   position: absolute;
   top: 50%;
+  right: 20px;
   transform: translateY(-50%);
 }

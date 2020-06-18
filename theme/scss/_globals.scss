@@ -4,3 +4,9 @@ body {
     background-size: cover;
     @include regular;
 }
+
+p a {
+  color: $black;
+  text-decoration: none;
+  @include bold;
+}
