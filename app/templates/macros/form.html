@@ -1,0 +1,12 @@
+{% macro text(name, placeholder) %}
+  <div class="form-field">
+    <input name="{{ name }}" type="text" placeholder="{{ placeholder }}" />
+  </div>
+{% endmacro %}
+
+{% macro password(name="password") %}
+  <div class="form-field">
+    <input name="{{ name }}" type="password" placeholder="Passwort" />
+    <img class="js--password-toggler" src="{{ url_for('static', filename='awesome-eye.svg') }}" />
+  </div>
+{% endmacro %}

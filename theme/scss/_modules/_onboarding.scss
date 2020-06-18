@@ -24,6 +24,11 @@
     height: 100%;
     padding: 40px;
     display: none;
+    background-color: $white;
+
+    &:last-child {
+      background-color: transparent;
+    }
 }
 .onboarding--stage .image {
     width: 100%;
@@ -66,7 +71,7 @@
 
     &.is--active {
         width: 24px;
-        
+
     }
 
     &:last-child {
