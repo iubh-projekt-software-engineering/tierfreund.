@@ -6,7 +6,6 @@ if __name__ == '__main__':
     from app.user.models import User
 
     new_user = User(
-        name='demo',
         username='user',
         email='jan-markus@gmx.de'
     )
