@@ -6,7 +6,8 @@ from flask import (
     request,
     url_for,
     session,
-    redirect
+    redirect,
+    flash
 )
 from flask_login import login_user
 from app import db
@@ -19,16 +20,18 @@ mod = Blueprint('login', __name__, url_prefix='/login')
 def index():
     if request.method == 'POST':
         user_or_none = db.session.query(User).filter_by(
-            username=request.form.get('username')
+            email=request.form.get('email')
         ).one_or_none()
 
         if user_or_none is None or not user_or_none.verify_password(request.form.get('password')):
             flash('Nutzer konnte nicht verifiziert werden.')
             return redirect(url_for('login.index'))
         
+        
+
         login_user(user_or_none)
 
-        # todo implement dashboard url and redirect
+        return redirect(url_for('dashboard.index'))
 
 
     return render_template('/login/index.html')

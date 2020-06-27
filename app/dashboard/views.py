@@ -4,7 +4,7 @@ from flask import (
     Blueprint,
     render_template
 )
-from app.core.auth import login_required
+from flask_login import login_required
 
 mod = Blueprint('dashboard', __name__, url_prefix='/dashboard')
 

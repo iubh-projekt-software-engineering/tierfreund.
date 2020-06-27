@@ -7,7 +7,8 @@ if __name__ == '__main__':
 
     new_user = User(
         name='demo',
-        username='user'
+        username='user',
+        email='jan-markus@gmx.de'
     )
     new_user.hash_password('demo')
 
