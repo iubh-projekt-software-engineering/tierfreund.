@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- encoding: utf-8 -*-
 from passlib.apps import custom_app_context as pwd_context
-from app import db
+from app import db, login_manager
 
 
 class User(db.Model):
@@ -17,3 +17,7 @@ class User(db.Model):
 
     def verify_password(self, password):
         return pwd_context.verify(password, self.password_hash)
+
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(int(user_id))
