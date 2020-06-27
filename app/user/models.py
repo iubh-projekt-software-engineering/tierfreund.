@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # -*- encoding: utf-8 -*-
+from flask_login import UserMixin
 from passlib.apps import custom_app_context as pwd_context
 from app import db, login_manager
 
 
-class User(db.Model):
+class User(db.Model, UserMixin):
     __tablename__ = 'user'
 
     id = db.Column(db.Integer, primary_key=True)
