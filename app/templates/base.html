@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/wcb4ril.css">
     <link rel="stylesheet" href="{{url_for('static', filename='bundle.css')}}">
   </head>
-  <body>
+  <body {% block bodyattr %}{% endblock %}>
 
     {% block body %}{% endblock %}
 
