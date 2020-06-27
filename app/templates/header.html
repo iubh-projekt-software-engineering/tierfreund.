@@ -2,17 +2,19 @@
     <div class="inside">
         
         <div class="burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+            <div class="inner">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </div>
 
-        <a class="logo" href="#">{{ config.APP_NAME }}</a>
+        <a class="logo" href="{{ url_for('dashboard.index') }}">{{ config.APP_NAME }}</a>
 
     </div>
 </header>
 
-<nav class="burger-navigation">
+<nav class="navigation">
     <ul class="main-links links">
         <li class="link-wrapper"><a class="link" href="#">Dein Dashboard.</a></li>
         <li class="link-wrapper"><a class="link" href="#">Deine Fellnasen.</a></li>

@@ -1,0 +1,25 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    transition: all .5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+    &.is--active {
+        background-color: $black;
+        color: $white;
+    }
+}
+.header .inside {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;    
+}
+.header.is--active .logo {
+    color: $white;
+}

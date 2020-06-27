@@ -1,0 +1,31 @@
+.navigation {
+    background-color: $black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    z-index: 2;
+    overflow-y: scroll;
+    border-top-width: 80px;
+    border-top-style: solid;
+    border-top-color: transparent;
+    padding: 40px;
+    color: $white;
+    transform: translateX(-100%);
+    transition: all .5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+    &.is--active {
+        transform: translateX(0);
+    }
+}
+.navigation .main-links {
+    list-style: none;
+}
+.navigation .link {
+    display: block;
+    text-decoration: none;
+    color: $white;
+    font-size: 24px;
+    margin-bottom: 50px;
+}

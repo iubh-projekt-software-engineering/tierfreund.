@@ -34,3 +34,13 @@ Array.from(document.querySelectorAll('.js--password-toggler')).forEach((toggler)
     inputField.type = inputField.type === 'text' ? 'password' : 'text';
   });
 });
+
+const burger = document.querySelector('.burger');
+const header = document.querySelector('.header');
+const nav = document.querySelector('.navigation');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('is--active');
+    nav.classList.toggle('is--active');
+    header.classList.toggle('is--active');  
+});

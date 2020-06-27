@@ -1,8 +1,12 @@
 body {
     color: $black;
-    background-image: url('/static/login-background.svg');
-    background-size: cover;
+    padding-top: 80px;
     @include regular;
+
+    &:not(.is--dashboard) {
+        background-image: url('/static/login-background.svg');
+        background-size: cover;
+    } 
 }
 
 p a {
