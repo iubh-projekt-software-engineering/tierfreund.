@@ -6,6 +6,7 @@
 
 @import 'globals';
 
+@import '_components/_inside';
 @import '_components/button';
 @import '_components/bottom-container';
 @import '_components/input';
@@ -18,3 +19,4 @@
 
 @import '_modules/onboarding';
 @import '_modules/guide-module';
+@import '_modules/introduction';

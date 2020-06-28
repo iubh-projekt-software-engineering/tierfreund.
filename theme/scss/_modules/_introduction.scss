@@ -1,0 +1,7 @@
+.introduction .greets {
+    font-size: 40px;
+    @include bold;
+}
+.introduction p {
+    font-size: 18px;
+}

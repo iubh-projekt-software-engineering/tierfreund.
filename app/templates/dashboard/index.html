@@ -1,1 +1,12 @@
 {% extends 'dashboard_base.html' %}
+
+{% block main %}
+
+    <div class="introduction">
+        <div class="inside">
+            <h2 class="greets">Hi {{ current_user.username }}</h2>
+            <p>Habe einen schönen Tag.</p>
+        </div>
+    </div>
+
+{% endblock %}
