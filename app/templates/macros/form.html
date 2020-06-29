@@ -1,12 +1,51 @@
-{% macro text(name, placeholder) %}
+{% macro text(name, placeholder, required=False) %}
   <div class="form-field">
-    <input name="{{ name }}" type="text" placeholder="{{ placeholder }}" />
+    <input {% if required %}required{% endif %} name="{{ name }}" type="text" placeholder="{{ placeholder }}{% if required %}*{% endif %}" />
   </div>
 {% endmacro %}
 
 {% macro password(name="password") %}
   <div class="form-field">
-    <input name="{{ name }}" type="password" placeholder="Passwort" />
+    <input {% if required %}required{% endif %} name="{{ name }}" type="password" placeholder="Passwort" />
     <img class="js--password-toggler" src="{{ url_for('static', filename='awesome-eye.svg') }}" />
+  </div>
+{% endmacro %}
+
+{% macro date(name, placeholder, required=False) %}
+  <div class="form-field">
+    <input {% if required %}required{% endif %} name="{{ name }}" type="date" placeholder="{{ placeholder }}{% if required %}*{% endif %}" />
+  </div>
+{% endmacro %}
+
+{% macro textarea(name, placeholder, required=False) %}
+  <div class="form-field">
+    <textarea {% if required %}required{% endif %} name="{{ name }}" type="date" placeholder="{{ placeholder }}{% if required %}*{% endif %}"></textarea>
+  </div>
+{% endmacro %}
+
+{% macro password(name="password") %}
+  <div class="form-field">
+    <input {% if required %}required{% endif %} name="{{ name }}" type="password" placeholder="Passwort" />
+    <img class="js--password-toggler" src="{{ url_for('static', filename='awesome-eye.svg') }}" />
+  </div>
+{% endmacro %}
+
+{% macro submit(text="Speichern") %}
+  <div class="form-field">
+    <input value="{{ text }}" type="submit" />
+  </div>
+{% endmacro %}
+
+{% macro cancel(text="Abbrechen") %}
+  <div class="form-field">
+    <a href="#" class="button is--outlined">{{ text }}</a>
+  </div>
+{% endmacro %}
+
+{% macro color(colors) %}
+  <div class="form-field color-picker">
+    {% for color in colors %}
+      <div class="color" style="background-color: {{ color }}"></div>
+    {% endfor %}
   </div>
 {% endmacro %}

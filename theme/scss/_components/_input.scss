@@ -4,7 +4,9 @@
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="date"],
+textarea {
   border-width: 1px;
   border-style: solid;
   border-color: $black;
@@ -37,4 +39,14 @@ input[type="submit"] {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
+}
+
+.color-picker {
+  display: flex;
+  justify-content: space-between;
+  .color {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
 }

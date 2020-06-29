@@ -19,4 +19,5 @@ def index():
 
 @mod.route('/erstellen')
 def create():
-    return render_template('/animals/create.html')
+    colors = ('#6067EE', '#20AB62', '#F77161', '#FE9055', '#FDBB45')
+    return render_template('/animals/create.html', colors=colors)

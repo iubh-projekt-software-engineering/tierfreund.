@@ -1,10 +1,20 @@
 {% extends 'dashboard_base.html' %}
+{% from 'macros/form.html' import text, date, textarea, submit, cancel, color %}
 
 {% block main %}
 
-    <div class="animal-detail">
+    <form class="form-box">
         <div class="inside">
+
+            {{ text('name', 'Namen eingeben', true) }}
+            {{ text('race', 'Rasse eingeben') }}
+            {{ date('birthdate') }}
+            {{ textarea('notes', 'Notizen eingeben') }}
+            {{ color(colors) }}
+            {{submit('Haustier speichern.')}}
+            {{cancel('Abbrechen.')}}
+
         </div>
-    </div>
+    </form>
 
 {% endblock %}
