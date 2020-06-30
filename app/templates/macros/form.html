@@ -50,3 +50,11 @@
     {% endfor %}
   </div>
 {% endmacro %}
+
+{% macro select(name, options) %}
+  <select name="{{name}}">
+    {% for option in options %}
+      <option value="{{ option.value}}">{{ option.label }}</option>
+    {% endfor %}
+  </select>
+{% endmacro %}
