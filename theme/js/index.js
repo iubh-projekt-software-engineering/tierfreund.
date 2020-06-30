@@ -1,5 +1,9 @@
 import Stepmation from './stepmation';
+import ColorPicker from './color-picker';
 
+Array.from(document.querySelectorAll('.js--color-picker')).forEach((el) => {
+    new ColorPicker(el);
+});
 
 if (document.querySelector('.onboarding--stage')) {
   const myStepmation = new Stepmation(document.querySelector('.onboarding--stage'));

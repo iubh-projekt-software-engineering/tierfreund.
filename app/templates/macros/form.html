@@ -42,10 +42,11 @@
   </div>
 {% endmacro %}
 
-{% macro color(colors) %}
-  <div class="form-field color-picker">
+{% macro color(name, colors) %}
+  <div class="form-field color-picker js--color-picker">
+    <input name="{{ name }}" type="hidden" />
     {% for color in colors %}
-      <div class="color" style="background-color: {{ color }}"></div>
+      <div class="color" data-color="{{ color }}" style="background-color: {{ color }}"></div>
     {% endfor %}
   </div>
 {% endmacro %}
