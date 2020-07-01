@@ -25,7 +25,7 @@ def create():
         try:
             new_animal = Animal(
                 user_id=current_user.id,
-                type=request.form.get('type'), 
+                type=request.form.get('type'),
                 name=request.form.get('name'),
                 race=request.form.get('race'),
                 color=request.form.get('color'),
@@ -47,3 +47,15 @@ def create():
     } for animal in AnimalTypes.getTypes()]
     colors = ('#6067EE', '#20AB62', '#F77161', '#FE9055', '#FDBB45')
     return render_template('/animals/create.html', colors=colors, types=types)
+
+@mod.route('/details/<int:animal_id>')
+def details(animal_id):
+    animal_or_none = db.session.query(Animal).filter_by(
+        id=animal_id, user_id=current_user.id
+    ).one_or_none()
+
+    if animal_or_none is None:
+        flash('Das Tier konnte leider nicht gefunden werden.')
+        return redirect(url_for('animal.index'))
+
+    return render_template('/animals/details.html', item=animal_or_none)

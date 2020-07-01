@@ -3,14 +3,14 @@
         <a href="#" class="inner-item">
 
             <div class="head" style="background-color: {{ color }}" >
-                <img class="animal-img" src="{% if type == 0 %}{{ url_for('static', filename='dog.svg') }}{% elif type == 1 %}{{ url_for('static', filename='cat.svg') }}{% endif %}" />
+                <img class="animal-img" src="{% if type == 1 %}{{ url_for('static', filename='dog.svg') }}{% elif type == 2 %}{{ url_for('static', filename='cat.svg') }}{% endif %}" />
             </div>
 
             <div class="data">
                 <div class="data-overlay" style="background-color: {{ color }}"></div>
                 <div class="data-content">
                     {% if type %}
-                        <p style="color: {{color}}" class="type">{% if type == 0 %}Hund{% elif type == 1 %}Katze{% endif %}</p>
+                        <p style="color: {{color}}" class="type">{% if type == 1 %}Hund{% elif type == 2 %}Katze{% endif %}</p>
                     {% endif %}
                     <p style="color: {{color}}" class="name">{{ name }}</p>
                     {% if race %}
