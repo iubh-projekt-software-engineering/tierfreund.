@@ -6,7 +6,63 @@
   <div class="animal-details">
     <div class="inside">
 
-      
+      <div class="stage" style="background-color: {{item.color}}"></div>
+
+      <div class="head">
+        <h1 class="name">{{ item.name }}</h1>
+        <p class="race">{{ item.type }}</p>
+      </div>
+
+      <div class="data">
+        <div class="data-inner">
+
+          <div class="box">
+            <div class="box-inner">
+              <div class="box-overlay"></div>
+              <div class="box-content">
+                <p class="type">Rasse</p>
+                <p class="value">{{ item.race }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="box-inner">
+              <div class="box-overlay"></div>
+              <div class="box-content">
+                <p class="type">Geschlecht</p>
+                <p class="value">{{ item.gender }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="box-inner">
+              <div class="box-overlay"></div>
+              <div class="box-content">
+                <p class="type">Geboren</p>
+                <p class="value">{{ item.birthdate }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="box-inner">
+              <div class="box-overlay"></div>
+              <div class="box-content">
+                <p class="type">Gewicht</p>
+                <p class="value">{{ item.weight }}</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="notes">
+        <p class="title">Wichtige Notizen.</p>
+        <p>{{ item.notes }}</p>
+      </div>
 
     </div>
   </div>

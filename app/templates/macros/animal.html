@@ -1,6 +1,6 @@
-{% macro item(name, type, race, color='black') %}
+{% macro item(id, name, type, race, color='black') %}
     <div class="animal-listing-item">
-        <a href="#" class="inner-item">
+        <a href="{{ url_for('animal.details', animal_id=id)}}" class="inner-item">
 
             <div class="head" style="background-color: {{ color }}" >
                 <img class="animal-img" src="{% if type == 1 %}{{ url_for('static', filename='dog.svg') }}{% elif type == 2 %}{{ url_for('static', filename='cat.svg') }}{% endif %}" />
