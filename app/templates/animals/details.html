@@ -19,7 +19,7 @@
               <div class="box-overlay" style="background-color: {{item.color}}"></div>
               <div class="box-content">
                 <p class="type">Rasse</p>
-                <p class="value">{{ item.race }}</p>
+                <p class="value">{% if item.race %}{{ item.race }}{% else %}n.A.{% endif %}</p>
               </div>
             </div>
           </div>
