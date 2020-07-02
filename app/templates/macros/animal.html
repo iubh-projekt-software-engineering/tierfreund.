@@ -1,0 +1,23 @@
+{% macro item(id, name, type, race, color='black') %}
+    <div class="animal-listing-item">
+        <a href="{{ url_for('animal.details', animal_id=id)}}" class="inner-item">
+
+            <div class="head" style="background-color: {{ color }}" >
+                <img class="animal-img" src="{% if type == 1 %}{{ url_for('static', filename='dog.svg') }}{% elif type == 2 %}{{ url_for('static', filename='cat.svg') }}{% endif %}" />
+            </div>
+
+            <div class="data">
+                <div class="data-overlay" style="background-color: {{ color }}"></div>
+                <div class="data-content">
+                    {% if type %}
+                        <p style="color: {{color}}" class="type">{% if type == 1 %}Hund{% elif type == 2 %}Katze{% endif %}</p>
+                    {% endif %}
+                    <p style="color: {{color}}" class="name">{{ name }}</p>
+                    {% if race %}
+                        <p style="color: {{color}}" class="race">{% if race %}{{ race }}{% else %}n.A.{% endif %}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </a>
+    </div>
+{% endmacro %}

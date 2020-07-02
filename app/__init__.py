@@ -27,3 +27,6 @@ app.register_blueprint(mod_logout)
 
 from app.index.views import mod as mod_index
 app.register_blueprint(mod_index)
+
+from app.animal.views import mod as mod_animals
+app.register_blueprint(mod_animals)

@@ -10,8 +10,12 @@
     {% include 'header.html' %}
 
     <main class="wrapper">
-
         {% block main %}{% endblock %}
-
     </main>
+
+    {% if create_url %}
+        <a class="flying-button" href="{{ create_url }}"></a>
+    {% endif %}
+
+
 {% endblock %}
