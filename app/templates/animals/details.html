@@ -18,8 +18,8 @@
             <div class="box-inner">
               <div class="box-overlay" style="background-color: {{item.color}}"></div>
               <div class="box-content">
-                <p class="type">Rasse</p>
-                <p class="value">{% if item.race %}{{ item.race }}{% else %}n.A.{% endif %}</p>
+                <p class="type" style="color: {{item.color}}">Rasse</p>
+                <p class="value" style="color: {{item.color}}">{% if item.race %}{{ item.race }}{% else %}n.A.{% endif %}</p>
               </div>
             </div>
           </div>
@@ -28,8 +28,8 @@
             <div class="box-inner">
               <div class="box-overlay" style="background-color: {{item.color}}"></div>
               <div class="box-content">
-                <p class="type">Geschlecht</p>
-                <p class="value">{{ item.gender }}</p>
+                <p class="type" style="color: {{item.color}}">Geschlecht</p>
+                <p class="value" style="color: {{item.color}}">{% if item.gender %}{{ item.gender }}{% else %}n.A.{% endif %}</p>
               </div>
             </div>
           </div>
@@ -38,8 +38,8 @@
             <div class="box-inner">
               <div class="box-overlay" style="background-color: {{item.color}}"></div>
               <div class="box-content">
-                <p class="type">Geboren</p>
-                <p class="value">{{ item.birthdate }}</p>
+                <p class="type" style="color: {{item.color}}">Geboren</p>
+                <p class="value" style="color: {{item.color}}">{% if item.birthdate %}{{ item.birthdate }}{% else %}n.A.{% endif %}</p>
               </div>
             </div>
           </div>
@@ -48,8 +48,8 @@
             <div class="box-inner">
               <div class="box-overlay" style="background-color: {{item.color}}"></div>
               <div class="box-content">
-                <p class="type">Gewicht</p>
-                <p class="value">{{ item.weight }}</p>
+                <p class="type" style="color: {{item.color}}">Gewicht</p>
+                <p class="value" style="color: {{item.color}}">{{ item.weight }}</p>
               </div>
             </div>
           </div>
