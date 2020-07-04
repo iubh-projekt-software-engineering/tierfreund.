@@ -65,8 +65,8 @@
 
       <div class="actions">
         <a class="button">Bearbeiten</a>
-        <form>
-        <a class="button">Löschen</a>
+        <form method="POST" action="{{ url_for('animal.delete', animal_id=item.id) }}" onsubmit="return confirm('Wirklich löschen');">
+          <button class="button">Löschen</button>
         </form>
       </div>
 
