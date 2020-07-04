@@ -455,3 +455,21 @@ input[type="submit"] {
     font-family: sofia-pro, sans-serif;
     font-weight: 700;
     font-style: normal; }
+
+.animal-details .notes {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  .animal-details .notes .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: sofia-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal; }
+  .animal-details .notes p {
+    font-size: 18px; }
+
+.animal-details .actions {
+  padding-top: 40px;
+  padding-bottom: 20px; }
+  .animal-details .actions .button {
+    margin-bottom: 20px; }

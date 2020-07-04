@@ -56,16 +56,18 @@
 
       </div>
 
-      <div class="notes">
-        <p class="title">Wichtige Notizen.</p>
-        <p>{{ item.notes }}</p>
-      </div>
+      {% if item.notes %}
+        <div class="notes">
+          <p class="title">Wichtige Notizen.</p>
+          <p>{{ item.notes }}</p>
+        </div>
+      {% endif %}
 
       <div class="actions">
         <a class="button">Bearbeiten</a>
-        <form
+        <form>
         <a class="button">Löschen</a>
-        </div>
+        </form>
       </div>
 
     </div>

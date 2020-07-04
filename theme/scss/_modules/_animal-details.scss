@@ -59,3 +59,25 @@
         @include bold;
     }
 }
+.animal-details .notes {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        @include bold;        
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+.animal-details .actions {
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    .button {
+        margin-bottom: 20px;
+    }
+}
