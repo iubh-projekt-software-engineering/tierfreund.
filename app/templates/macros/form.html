@@ -28,18 +28,18 @@
     <input value="{{ text }}" type="submit" />
   </div>
 {% endmacro %}
-  
+
 {% macro cancel(text="Abbrechen") %}
   <div class="form-field">
     <a href="#" class="button is--outlined">{{ text }}</a>
   </div>
 {% endmacro %}
 
-{% macro color(name, colors) %}
+{% macro color(name, colors, value=None) %}
   <div class="form-field color-picker js--color-picker">
-    <input name="{{ name }}" type="hidden" />
+    <input name="{{ name }}" type="hidden" {% if value and value == color %}value="{{ value }}"{% endif %} />
     {% for color in colors %}
-      <div class="color" data-color="{{ color }}" style="background-color: {{ color }}"></div>
+      <div class="color {% if value and value == color %}is--active{% endif %}" data-color="{{ color }}" style="background-color: {{ color }}"></div>
     {% endfor %}
   </div>
 {% endmacro %}

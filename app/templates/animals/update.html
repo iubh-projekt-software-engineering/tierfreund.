@@ -8,11 +8,11 @@
 
             {{ text('name', 'Namen eingeben', required=true, value=item.name) }}
             {{  select('type', types) }}
-            {{ text('race', 'Rasse eingeben') }}
-            {{ text('weight', 'Gewicht eingeben') }}
-            {{ date('birthdate') }}
-            {{ textarea('notes', 'Notizen eingeben') }}
-            {{ color('color', colors) }}
+            {{ text('race', 'Rasse eingeben', value=item.race) }}
+            {{ text('weight', 'Gewicht eingeben', value=item.weight) }}
+            {{ date('birthdate', value=item.birthdate) }}
+            {{ textarea('notes', 'Notizen eingeben', value=item.notes) }}
+            {{ color('color', colors, value=item.color) }}
             {{submit('Haustier speichern.')}}
             {{cancel('Abbrechen.')}}
 
