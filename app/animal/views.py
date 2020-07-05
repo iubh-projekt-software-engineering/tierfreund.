@@ -89,7 +89,7 @@ def update(animal_id):
         'label': animal['label']
     } for animal in AnimalTypes.getTypes()]
     colors = ('#6067EE', '#20AB62', '#F77161', '#FE9055', '#FDBB45')
-    return render_template('/animals/create.html', colors=colors, types=types)
+    return render_template('/animals/update.html', colors=colors, types=types, item=animal_or_none)
 
 @mod.route('/details/<int:animal_id>')
 def details(animal_id):

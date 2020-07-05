@@ -64,7 +64,7 @@
       {% endif %}
 
       <div class="actions">
-        <a class="button">Bearbeiten</a>
+        <a class="button" href="{{ url_for('animal.update', animal_id=item.id) }}">Bearbeiten</a>
         <form method="POST" action="{{ url_for('animal.delete', animal_id=item.id) }}" onsubmit="return confirm('Wirklich löschen');">
           <button class="button">Löschen</button>
         </form>
