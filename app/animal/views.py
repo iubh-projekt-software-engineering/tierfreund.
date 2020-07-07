@@ -65,7 +65,7 @@ def update(animal_id):
 
     if animal_or_none is None:
         flash('Tier wurde nicht gefunden.')
-        return redirect(url_for('animal.index'))
+        return redirect(url_for('animal.details', animal_id=animal_id))
 
     if request.method == 'POST':
         try:
@@ -76,13 +76,13 @@ def update(animal_id):
             animal_or_none.birthdate = request.form.get('birthdate')
             animal_or_none.weight = request.form.get('weight')
             animal_or_none.notes = request.form.get('notes')
-            db.session.update(animal_or_none)
             db.session.commit()
         except Exception as e:
             print(e)
-            pass
+            return redirect(url_for('animal.update', animal_id=animal_id))
 
-        return redirect(url_for('animal.index'))
+
+        return redirect(url_for('animal.details', animal_id=animal_id))
 
     types = [ {
         'value': animal['id'],

@@ -3,7 +3,7 @@
 
 {% block main %}
 
-    <form class="form-box" method="POST" action="{{ url_for('animal.create') }}">
+    <form class="form-box" method="POST" action="{{ url_for('animal.update', animal_id=item.id) }}">
         <div class="inside">
 
             {{ text('name', 'Namen eingeben', required=true, value=item.name) }}
