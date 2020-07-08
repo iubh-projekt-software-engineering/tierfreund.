@@ -1,0 +1,20 @@
+{% extends 'dashboard_base.html' %}
+
+
+{% block main %}
+
+  <div class="docs-details">
+
+    <div class="inside">
+
+      <div class="actions">
+        <a class="button" href="{{ url_for('doc.update', doc_id=item.id) }}">Bearbeiten</a>
+        <form method="POST" action="{{ url_for('doc.delete', doc_id=item.id) }}" onsubmit="return confirm('Wirklich löschen');">
+          <button class="button">Löschen</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
