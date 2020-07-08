@@ -1,4 +1,5 @@
 from app import db
+from app.user.models import User
 
 
 class Doc(db.Model):
