@@ -72,7 +72,6 @@ def update(doc_id):
             print(e)
             return redirect(url_for('doc.update', doc_id=doc_id))
 
-
         return redirect(url_for('doc.details', doc_id=doc_id))
 
     return render_template('/docs/update.html', item=doc_or_none)
