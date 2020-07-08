@@ -37,10 +37,7 @@
 
 {% macro color(name, colors, required=False, value=None) %}
   <div class="form-field color-picker js--color-picker">
-    <input name="{{ name }}" {% if required %}required{% endif %} {% if value and value == color %}value="{{ value }}"{% endif %} />
-    {% for color in colors %}
-      <div class="color {% if value and value == color %}is--active{% endif %}" data-color="{{ color }}" style="background-color: {{ color }}"></div>
-    {% endfor %}
+    <input type="color" name="{{ name }}" {% if required %}required{% endif %} {% if value and value == color %}value="{{ value }}"{% endif %} />
   </div>
 {% endmacro %}
 
