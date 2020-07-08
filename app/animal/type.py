@@ -13,6 +13,11 @@ class Animal:
     def getTypes():
         return (Animal.dog, Animal.cat)
 
+animal_labels = {
+    1: Animal.dog,
+    2: Animal.cat
+}
+
 class Gender:
     @staticmethod
     def getGender():

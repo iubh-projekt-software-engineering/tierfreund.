@@ -6,15 +6,15 @@
     <form class="form-box" method="POST" action="{{ url_for('animal.create') }}">
         <div class="inside">
 
-            {{ text('name', 'Namen eingeben', true) }}
-            {{  select('type', types) }}
+            {{ text('name', 'Namen eingeben', required=True) }}
+            {{ select('type', types) }}
             {{ text('race', 'Rasse eingeben') }}
             {{ text('weight', 'Gewicht eingeben') }}
             {{ date('birthdate') }}
             {{ textarea('notes', 'Notizen eingeben') }}
-            {{ color('color', colors) }}
-            {{submit('Haustier speichern.')}}
-            {{cancel('Abbrechen.')}}
+            {{ color('color', colors, required=True) }}
+            {{ submit('Haustier speichern.') }}
+            {{ cancel('Abbrechen.') }}
 
         </div>
     </form>

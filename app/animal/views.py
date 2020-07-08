@@ -9,7 +9,7 @@ from flask import (
 from flask_login import current_user
 from app import db
 from app.animal.model import Animal
-from app.animal.type import Animal as AnimalTypes
+from app.animal.type import Animal as AnimalTypes, animal_labels
 
 
 mod = Blueprint('animal', __name__, url_prefix='/tiere')
@@ -28,7 +28,6 @@ def index():
 
 @mod.route('/erstellen', methods=['GET', 'POST'])
 def create():
-
     if request.method == 'POST':
         try:
             new_animal = Animal(
@@ -101,7 +100,11 @@ def details(animal_id):
         flash('Das Tier konnte leider nicht gefunden werden.')
         return redirect(url_for('animal.index'))
 
-    return render_template('/animals/details.html', item=animal_or_none)
+    return render_template(
+        '/animals/details.html',
+        item=animal_or_none,
+        animal_labels=animal_labels
+    )
 
 
 @mod.route('/loeschen/<int:animal_id>', methods=['POST'])

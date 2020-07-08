@@ -6,15 +6,15 @@
     <form class="form-box" method="POST" action="{{ url_for('animal.update', animal_id=item.id) }}">
         <div class="inside">
 
-            {{ text('name', 'Namen eingeben', required=true, value=item.name) }}
-            {{  select('type', types) }}
+            {{ text('name', 'Namen eingeben', required=True, value=item.name) }}
+            {{ select('type', types) }}
             {{ text('race', 'Rasse eingeben', value=item.race) }}
             {{ text('weight', 'Gewicht eingeben', value=item.weight) }}
             {{ date('birthdate', value=item.birthdate) }}
             {{ textarea('notes', 'Notizen eingeben', value=item.notes) }}
-            {{ color('color', colors, value=item.color) }}
-            {{submit('Haustier speichern.')}}
-            {{cancel('Abbrechen.')}}
+            {{ color('color', colors, value=item.color, required=True) }}
+            {{ submit('Haustier speichern.') }}
+            {{ cancel('Abbrechen.') }}
 
         </div>
     </form>

@@ -10,7 +10,9 @@
 
       <div class="head">
         <h1 class="name">{{ item.name }}</h1>
-        <p class="race">{{ item.type }}</p>
+        {% if item.type in animal_labels %}
+          <p class="race">{{ animal_labels[item.type].label }}</p>
+        {% endif %}
       </div>
 
       <div class="data">
