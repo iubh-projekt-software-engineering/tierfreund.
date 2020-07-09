@@ -3,6 +3,7 @@
 from app import db
 from app.user.models import User
 from app.animal.model import Animal
+from app.doc.model import Doc
 
 if __name__ == '__main__':
     db.create_all()
