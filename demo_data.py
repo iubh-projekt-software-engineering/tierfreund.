@@ -7,8 +7,8 @@ if __name__ == '__main__':
     from app.animal.model import Animal
 
     new_user = User(
-        username='user',
-        email='jan-markus@gmx.de'
+        username='demo',
+        email='demo@demo.de'
     )
     new_user.hash_password('demo')
 
