@@ -3,8 +3,24 @@
 {% block main %}
 
     <div class="docs-listing">
-        <div class="inside">
+        <div class="docs-listing__inside">
 
+            {% for item in docs %}
+                <div class="doc-item">
+                    <div class="doc-item__inside">
+                        {% if item.name %}
+                            <p class="doc-item__name">{{ item.name }}</p>
+                        {% endif %}
+                        {% if item.street %}
+                            <p class="doc-item__street">{{ item.street }}</p>
+                        {% endif %}
+                        {% if item.plz or item.city %}
+                            <p class="doc-item__city">{% if item.plz %}%{{ item.plz }} {% endif %}{% if item.city%}{{ item.city }}{% endif %}</p>
+                        {% endif %}
+                    </div>
+                </div>
+
+            {% endfor %}
 
         </div>
     </div>
