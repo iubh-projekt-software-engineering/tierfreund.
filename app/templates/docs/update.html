@@ -1,0 +1,21 @@
+{% extends 'dashboard_base.html' %}
+{% from 'macros/form.html' import text, submit, cancel %}
+
+{% block main %}
+
+    <form class="form-box" method="POST" action="{{ url_for('doc.update', doc_id=item.id) }}">
+        <div class="inside">
+
+            {{ text('name', 'Namen eingeben', required=True, value=item.name) }}
+            {{ text('street', 'Straße eingeben', value=item.street) }}
+            {{ text('zip', 'Postleitzahl eingeben', value=item.zip) }}
+            {{ text('city', 'Stadt eingeben', value=item.city) }}
+            {{ text('phonenumber', 'Telefonnummer eingeben', value=item.phonenumber) }}
+            {{ text('email', 'E-Mail eingeben', value=item.email) }}
+            {{ submit('Arzt speichern.') }}
+            {{ cancel('Abbrechen.') }}
+
+        </div>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'dashboard_base.html' %}
+{% from 'macros/form.html' import text, submit, cancel %}
+
+{% block main %}
+
+    <form class="form-box" method="POST" action="{{ url_for('doc.create') }}">
+        <div class="inside">
+
+            {{ text('name', 'Namen eingeben', required=True) }}
+            {{ text('street', 'Straße eingeben') }}
+            {{ text('zip', 'Postleitzahl eingeben') }}
+            {{ text('city', 'Stadt eingeben') }}
+            {{ text('phonenumber', 'Telefonnummer eingeben') }}
+            {{ text('email', 'E-Mail eingeben') }}
+            {{ submit('Arzt speichern.') }}
+            {{ cancel('Abbrechen.') }}
+
+        </div>
+    </form>
+
+{% endblock %}

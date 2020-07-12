@@ -1,0 +1,41 @@
+{% extends 'dashboard_base.html' %}
+{% from 'macros/icon.html' import icon %}
+
+{% block main %}
+
+    <div class="doclisting">
+        <div class="doclisting__inside">
+
+            {% for item in docs %}
+                <div class="docitem doclisting__docitem">
+                    <div class="docitem__inside">
+                        {% if item.name %}
+                            <p class="docitem__name">{{ item.name }}</p>
+                        {% endif %}
+                        {% if item.street %}
+                            <p class="docitem__street">{{ item.street }}</p>
+                        {% endif %}
+                        {% if item.plz or item.city %}
+                            <p class="docitem__city">{% if item.plz %}%{{ item.plz }} {% endif %}{% if item.city%}{{ item.city }}{% endif %}</p>
+                        {% endif %}
+
+                        <div class="iconlist">
+                            <div class="iconlist__row">
+                                <div class="iconlist__icon">{{ icon(name='phone.svg') }}</div>
+                                <div class="iconlist__text">{{ item.phonenumber }}</div>
+                            </div>
+                            <div class="iconlist__row">
+                                <div class="iconlist__icon">{{ icon(name='mail.svg') }}</div>
+                                <div class="iconlist__text">{{ item.email }}</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}

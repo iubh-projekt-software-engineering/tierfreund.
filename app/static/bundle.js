@@ -108,6 +108,17 @@ eval("function _defineProperties(target, props) {\n  for (var i = 0; i < props.l
 
 /***/ }),
 
+/***/ "./theme/index.scss":
+/*!**************************!*\
+  !*** ./theme/index.scss ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"bundle.css\";\n\n//# sourceURL=webpack:///./theme/index.scss?");
+
+/***/ }),
+
 /***/ "./theme/js/color-picker.js":
 /*!**********************************!*\
   !*** ./theme/js/color-picker.js ***!
@@ -144,25 +155,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bab
 
 /***/ }),
 
-/***/ "./theme/scss/index.scss":
-/*!*******************************!*\
-  !*** ./theme/scss/index.scss ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"bundle.css\";\n\n//# sourceURL=webpack:///./theme/scss/index.scss?");
-
-/***/ }),
-
 /***/ 0:
-/*!*********************************************************!*\
-  !*** multi ./theme/scss/index.scss ./theme/js/index.js ***!
-  \*********************************************************/
+/*!****************************************************!*\
+  !*** multi ./theme/index.scss ./theme/js/index.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./theme/scss/index.scss */\"./theme/scss/index.scss\");\nmodule.exports = __webpack_require__(/*! ./theme/js/index.js */\"./theme/js/index.js\");\n\n\n//# sourceURL=webpack:///multi_./theme/scss/index.scss_./theme/js/index.js?");
+eval("__webpack_require__(/*! ./theme/index.scss */\"./theme/index.scss\");\nmodule.exports = __webpack_require__(/*! ./theme/js/index.js */\"./theme/js/index.js\");\n\n\n//# sourceURL=webpack:///multi_./theme/index.scss_./theme/js/index.js?");
 
 /***/ })
 

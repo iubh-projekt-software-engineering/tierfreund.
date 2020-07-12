@@ -1,0 +1,5 @@
+{% macro icon(name, color='') %}
+    <div class="single-icon" data-color="{{ color }}">
+        <img class="single-icon__svg" src="{{ url_for('static', filename=name) }}" />
+    </div>
+{% endmacro %}

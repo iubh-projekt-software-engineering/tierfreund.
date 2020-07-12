@@ -30,3 +30,6 @@ app.register_blueprint(mod_index)
 
 from app.animal.views import mod as mod_animals
 app.register_blueprint(mod_animals)
+
+from app.doc.views import mod as mod_docs
+app.register_blueprint(mod_docs)

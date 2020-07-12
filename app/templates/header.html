@@ -18,11 +18,11 @@
     <ul class="main-links links">
         <li class="link-wrapper"><a class="link" href="#">Dein Dashboard.</a></li>
         <li class="link-wrapper"><a class="link" href="{{ url_for('animal.index') }}">Deine Fellnasen.</a></li>
-        <li class="link-wrapper"><a class="link" href="#">Deine Ärzte.</a></li>
+        <li class="link-wrapper"><a class="link" href="{{ url_for('doc.index') }}">Deine Ärzte.</a></li>
         <li class="link-wrapper"><a class="link" href="#">Deine Erinnerungen.</a></li>
         <li class="link-wrapper"><a class="link" href="#">Dein Account.</a></li>
         <li class="link-wrapper"><a class="link" href="#">Impressum.</a></li>
         <li class="link-wrapper"><a class="link" href="#">Datenschutz.</a></li>
-        <li class="link-wrapper"><a class="link" href="#">Abmelden.</a></li>
+        <li class="link-wrapper"><a class="link" href="{{ url_for('logout.index') }}">Abmelden.</a></li>
     </ul>
 </nav>

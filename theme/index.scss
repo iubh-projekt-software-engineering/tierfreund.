@@ -1,0 +1,38 @@
+@import 'scss/normalize';
+
+// mixins
+@import 'scss/vars';
+@import 'scss/fonts';
+@import 'scss/colors';
+
+@import 'scss/globals';
+
+@import 'scss/_components/_inside';
+@import 'scss/_components/button';
+@import 'scss/_components/bottom-container';
+@import 'scss/_components/input';
+@import 'scss/_components/footnote';
+@import 'scss/_components/header';
+@import 'scss/_components/logo';
+@import 'scss/_components/burger';
+@import 'scss/_components/navigation';
+@import 'scss/_components/animal-listing-item';
+@import 'scss/_components/flying-button';
+
+@import 'scss/_modules/onboarding';
+@import 'scss/_modules/guide-module';
+@import 'scss/_modules/introduction';
+@import 'scss/_modules/animal-listing';
+@import 'scss/_modules/animal-details';
+
+@import 'common.blocks/iconlist/__row/iconlist__row';
+@import 'common.blocks/iconlist/__icon/iconlist__icon';
+@import 'common.blocks/iconlist/__text/iconlist__text';
+
+@import 'common.blocks/doclisting/doclisting';
+@import 'common.blocks/doclisting/__docitem/doclisting__docitem';
+
+@import 'common.blocks/docitem/__inside/docitem__inside';
+@import 'common.blocks/docitem/__city/docitem__city';
+@import 'common.blocks/docitem/__name/docitem__name';
+@import 'common.blocks/docitem/__street/docitem__street';

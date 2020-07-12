@@ -3,15 +3,14 @@
 from flask import (
     Blueprint,
     url_for,
-    session,
     redirect
 )
+from flask_login import logout_user
 
 mod = Blueprint('logout', __name__)
 
 
 @mod.route('/logout', methods=['GET', 'POST'])
 def index():
-    if 'username' in session:
-        del session['username']
+    logout_user()
     return redirect(url_for('login.index'))
