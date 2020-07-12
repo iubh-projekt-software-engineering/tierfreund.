@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12.003" height="20.992" viewBox="0 0 12.003 20.992">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #323434;
+      }
+    </style>
+  </defs>
+  <path id="Icon_ionic-ios-arrow-forward" data-name="Icon ionic-ios-arrow-forward" class="cls-1" d="M18.381,16,10.438,8.063a1.494,1.494,0,0,1,0-2.119,1.513,1.513,0,0,1,2.125,0l9,8.994a1.5,1.5,0,0,1,.044,2.069l-9.038,9.056a1.5,1.5,0,0,1-2.125-2.119Z" transform="translate(-9.997 -5.508)"/>
+</svg>

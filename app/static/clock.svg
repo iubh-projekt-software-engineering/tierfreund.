@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.333" height="15.333" viewBox="0 0 15.333 15.333">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #323434;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.333px;
+      }
+    </style>
+  </defs>
+  <g id="Icon_feather-clock" data-name="Icon feather-clock" transform="translate(-0.667 -0.667)">
+    <path id="Pfad_1251" data-name="Pfad 1251" class="cls-1" d="M15.333,8.333a7,7,0,1,1-7-7,7,7,0,0,1,7,7Z" transform="translate(0 0)"/>
+    <path id="Pfad_1252" data-name="Pfad 1252" class="cls-1" d="M8,4V8l2.667,1.333" transform="translate(0.417 0.222)"/>
+  </g>
+</svg>
