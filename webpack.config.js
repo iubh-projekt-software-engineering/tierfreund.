@@ -2,7 +2,7 @@ const path = require('path');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
-  entry: ['./theme/scss/index.scss', './theme/js/index.js'],
+  entry: ['./theme/index.scss', './theme/js/index.js'],
   output: {
     path: path.resolve(__dirname, './app/static/'),
     filename: 'bundle.js',

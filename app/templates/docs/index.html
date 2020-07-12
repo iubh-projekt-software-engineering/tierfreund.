@@ -1,22 +1,35 @@
 {% extends 'dashboard_base.html' %}
+{% from 'macros/icon.html' import icon %}
 
 {% block main %}
 
-    <div class="docs-listing">
-        <div class="docs-listing__inside">
+    <div class="doclisting">
+        <div class="doclisting__inside">
 
             {% for item in docs %}
-                <div class="doc-item">
-                    <div class="doc-item__inside">
+                <div class="docitem doclisting__docitem">
+                    <div class="docitem__inside">
                         {% if item.name %}
-                            <p class="doc-item__name">{{ item.name }}</p>
+                            <p class="docitem__name">{{ item.name }}</p>
                         {% endif %}
                         {% if item.street %}
-                            <p class="doc-item__street">{{ item.street }}</p>
+                            <p class="docitem__street">{{ item.street }}</p>
                         {% endif %}
                         {% if item.plz or item.city %}
-                            <p class="doc-item__city">{% if item.plz %}%{{ item.plz }} {% endif %}{% if item.city%}{{ item.city }}{% endif %}</p>
+                            <p class="docitem__city">{% if item.plz %}%{{ item.plz }} {% endif %}{% if item.city%}{{ item.city }}{% endif %}</p>
                         {% endif %}
+
+                        <div class="iconlist">
+                            <div class="iconlist__row">
+                                <div class="iconlist__icon">{{ icon(name='phone.svg') }}</div>
+                                <div class="iconlist__text">{{ item.phonenumber }}</div>
+                            </div>
+                            <div class="iconlist__row">
+                                <div class="iconlist__icon">{{ icon(name='mail.svg') }}</div>
+                                <div class="iconlist__text">{{ item.email }}</div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 

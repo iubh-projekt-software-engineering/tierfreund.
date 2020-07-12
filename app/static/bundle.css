@@ -474,3 +474,40 @@ input[type="submit"] {
   padding-bottom: 20px; }
   .animal-details .actions .button {
     margin-bottom: 20px; }
+
+.iconlist__row {
+  width: 100%;
+  display: flex;
+  align-items: center; }
+
+.iconlist__icon {
+  padding-right: 6px; }
+
+.iconlist__text {
+  padding-left: 6px; }
+
+.doclisting {
+  padding: 40px 20px; }
+
+.doclisting__docitem {
+  margin-bottom: 20px; }
+
+.docitem__inside {
+  background-color: rgba(253, 187, 69, 0.2);
+  border-radius: 20px;
+  padding: 20px; }
+
+.docitem__city {
+  color: #fdbb45;
+  font-size: 18px; }
+
+.docitem__name {
+  font-size: 18px;
+  color: #fdbb45;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal; }
+
+.docitem__street {
+  font-size: 18px;
+  color: #fdbb45; }
