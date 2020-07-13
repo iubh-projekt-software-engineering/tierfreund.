@@ -1,18 +1,55 @@
 {% extends 'dashboard_base.html' %}
-
+{% from 'macros/icon.html' import icon %}
 
 {% block main %}
 
-  <div class="docs-details">
+  <div class="doc-details">
 
-    <div class="inside">
+    <div class="doc-details__inside">
 
-      <div class="actions">
-        <a class="button" href="{{ url_for('doc.update', doc_id=item.id) }}">Bearbeiten</a>
-        <form method="POST" action="{{ url_for('doc.delete', doc_id=item.id) }}" onsubmit="return confirm('Wirklich löschen');">
-          <button class="button">Löschen</button>
-        </form>
-      </div>
+        <div class="doc-details__stage"></div>
+
+        <div class="doc-details__content">
+          
+          <p class="doc-details__name">{{ item.name }}</p>
+
+          {% if item.street or item.city or item.zip %}
+            <div class="doc-details__location">
+              
+              {% if item.street %}
+                <p class="doc-details__street">{{ item.street }}</p>
+              {% endif %}
+
+              {% if item.city or item.zip %}
+                <p class="doc-details__city">{% if item.zip %}{{ item.zip }} {% endif %}{{ item.city }}</p>
+              {% endif %}
+
+            </div>
+          {% endif %}
+
+          {% if item.phonenumber or item.email %}
+            <div class="iconlist doc-details__iconlist">
+              {% if item.phonenumber %}
+                <div class="iconlist__row">
+                  <div class="iconlist__icon">{{ icon(name='phone-yellow.svg') }}</div>
+                  <div class="iconlist__text doc-details__iconlist__text">{{ item.phonenumber }}</div>
+                </div>
+              {% endif %}
+
+              {% if item.email %}
+                <div class="iconlist__row">
+                  <div class="iconlist__icon">{{ icon(name='mail-yellow.svg') }}</div>
+                  <div class="iconlist__text doc-details__iconlist__text">{{ item.email }}</div>
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+
+
+          <a class="button" href="#">Tierarzt bearbeiten</a>
+          <a class="button button_outline" href="#">Tierarzt löschen</a>
+
+        </div>
 
     </div>
   </div>

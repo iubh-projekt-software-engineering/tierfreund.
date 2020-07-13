@@ -487,10 +487,14 @@ input[type="submit"] {
   padding-left: 6px; }
 
 .doclisting {
-  padding: 40px 20px; }
+  padding: 40px; }
 
 .doclisting__docitem {
   margin-bottom: 20px; }
+
+.docitem {
+  text-decoration: none;
+  display: block; }
 
 .docitem__inside {
   background-color: rgba(253, 187, 69, 0.2);
@@ -511,3 +515,25 @@ input[type="submit"] {
 .docitem__street {
   font-size: 18px;
   color: #fdbb45; }
+
+.docitem__iconlist {
+  margin-top: 20px; }
+
+.docitem__iconlist__text {
+  color: #fdbb45; }
+
+.doc-details__stage {
+  height: 280px;
+  background-color: #fdbb45; }
+
+.doc-details__content {
+  padding: 40px;
+  background-color: rgba(253, 187, 69, 0.2); }
+
+.doc-details__name {
+  color: #fdbb45;
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal; }

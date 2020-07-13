@@ -32,7 +32,14 @@
 @import 'common.blocks/doclisting/doclisting';
 @import 'common.blocks/doclisting/__docitem/doclisting__docitem';
 
+@import 'common.blocks/docitem/docitem';
 @import 'common.blocks/docitem/__inside/docitem__inside';
 @import 'common.blocks/docitem/__city/docitem__city';
 @import 'common.blocks/docitem/__name/docitem__name';
 @import 'common.blocks/docitem/__street/docitem__street';
+@import 'common.blocks/docitem/__iconlist/docitem__iconlist';
+@import 'common.blocks/docitem/__iconlist/__text/docitem__iconlist__text';
+
+@import 'common.blocks/doc-details/__stage/doc-details__stage';
+@import 'common.blocks/doc-details/__content/doc-details__content';
+@import 'common.blocks/doc-details/__name/doc-details__name';

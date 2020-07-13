@@ -7,7 +7,7 @@
         <div class="doclisting__inside">
 
             {% for item in docs %}
-                <div class="docitem doclisting__docitem">
+                <a href="{{ url_for('doc.details', doc_id=item.id) }}" class="docitem doclisting__docitem">
                     <div class="docitem__inside">
                         {% if item.name %}
                             <p class="docitem__name">{{ item.name }}</p>
@@ -19,20 +19,24 @@
                             <p class="docitem__city">{% if item.plz %}%{{ item.plz }} {% endif %}{% if item.city%}{{ item.city }}{% endif %}</p>
                         {% endif %}
 
-                        <div class="iconlist">
-                            <div class="iconlist__row">
-                                <div class="iconlist__icon">{{ icon(name='phone.svg') }}</div>
-                                <div class="iconlist__text">{{ item.phonenumber }}</div>
-                            </div>
-                            <div class="iconlist__row">
-                                <div class="iconlist__icon">{{ icon(name='mail.svg') }}</div>
-                                <div class="iconlist__text">{{ item.email }}</div>
-                            </div>
+                        <div class="iconlist docitem__iconlist">
+                            {% if item.phonenumber %}
+                                <div class="iconlist__row">
+                                    <div class="iconlist__icon">{{ icon(name='phone-yellow.svg') }}</div>
+                                    <div class="iconlist__text docitem__iconlist__text">{{ item.phonenumber }}</div>
+                                </div>
+                            {% endif %}
+
+                            {% if item.email %}
+                                <div class="iconlist__row">
+                                    <div class="iconlist__icon">{{ icon(name='mail-yellow.svg') }}</div>
+                                    <div class="iconlist__text docitem__iconlist__text">{{ item.email }}</div>
+                                </div>
+                            {% endif %}
                         </div>
 
                     </div>
-                </div>
-
+                </a>
             {% endfor %}
 
         </div>
