@@ -544,3 +544,22 @@ input[type="submit"] {
   font-family: sofia-pro, sans-serif;
   font-weight: 700;
   font-style: normal; }
+
+.doc-details__street {
+  color: #fdbb45;
+  font-size: 18px; }
+
+.doc-details__city {
+  color: #fdbb45;
+  font-size: 18px; }
+
+.doc-details__iconlist {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.doc-details__iconlist__text {
+  color: #fdbb45;
+  font-size: 18px; }
+
+.doc-details__button {
+  margin-bottom: 20px; }
