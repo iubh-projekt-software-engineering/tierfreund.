@@ -1,5 +1,5 @@
 {% extends 'dashboard_base.html' %}
-{% from 'macros/form.html' import text, date, textarea, submit, cancel, color, select %}
+{% from 'macros/form.html' import text, date, textarea, submit, cancel, color, select, float %}
 
 {% block main %}
 
@@ -9,7 +9,7 @@
             {{ text('name', 'Namen eingeben', required=True) }}
             {{ select('type', types) }}
             {{ text('race', 'Rasse eingeben') }}
-            {{ text('weight', 'Gewicht eingeben') }}
+            {{ float('weight', 'Gewicht eingeben') }}
             {{ date('birthdate') }}
             {{ textarea('notes', 'Notizen eingeben') }}
             {{ color('color', colors, required=True) }}
