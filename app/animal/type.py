@@ -9,18 +9,42 @@ class Animal:
         'id': 2
     }
 
+    fish = {
+        'label': 'Fisch',
+        'id': 3
+    }
+
+    mouse = {
+        'label': 'Maus',
+        'id': 4
+    }
+
+    bird = {
+        'label': 'Vogel',
+        'id': 5
+    }
+
+
+
     @staticmethod
-    def getTypes():
-        return (Animal.dog, Animal.cat)
+    def get_types():
+        return (
+            Animal.dog,
+            Animal.cat,
+            Animal.fish,
+            Animal.mouse,
+            Animal.bird
+        )
 
 animal_labels = {
-    1: Animal.dog,
-    2: Animal.cat
+    item['id']: item['label']
+    for item 
+    in Animal.get_types()
 }
 
 class Gender:
     @staticmethod
-    def getGender():
+    def get_gender():
         return (
             {
                 'label': 'männlich',
