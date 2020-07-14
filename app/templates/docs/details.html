@@ -48,8 +48,10 @@
           {% endif %}
 
 
-          <a class="button doc-details__button" href="#">Tierarzt bearbeiten</a>
-          <a class="button button_outline doc-details__button" href="#">Tierarzt löschen</a>
+          <a class="button doc-details__button" href="{{ url_for('doc.update', doc_id=item.id) }}">Tierarzt bearbeiten</a>
+          <form method="POST" action="{{ url_for('doc.delete', doc_id=item.id) }}" onsubmit="return confirm('Wirklich löschen');">
+            <button class="button">Löschen</button>
+          </form>
 
         </div>
 
