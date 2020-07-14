@@ -523,8 +523,15 @@ input[type="submit"] {
   color: #fdbb45; }
 
 .doc-details__stage {
+  position: relative;
   height: 280px;
   background-color: #fdbb45; }
+
+.doc-details__stage-image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); }
 
 .doc-details__content {
   padding: 40px;
