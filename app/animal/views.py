@@ -51,7 +51,7 @@ def create():
     types = [ {
         'value': animal['id'],
         'label': animal['label']
-    } for animal in AnimalTypes.getTypes()]
+    } for animal in AnimalTypes.get_types()]
     colors = ('#6067EE', '#20AB62', '#F77161', '#FE9055', '#FDBB45')
     return render_template('/animals/create.html', colors=colors, types=types)
 
@@ -86,7 +86,7 @@ def update(animal_id):
     types = [ {
         'value': animal['id'],
         'label': animal['label']
-    } for animal in AnimalTypes.getTypes()]
+    } for animal in AnimalTypes.get_types()]
     colors = ('#6067EE', '#20AB62', '#F77161', '#FE9055', '#FDBB45')
     return render_template('/animals/update.html', colors=colors, types=types, item=animal_or_none)
 
