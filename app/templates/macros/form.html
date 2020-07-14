@@ -6,7 +6,7 @@
 
 {% macro float(name, placeholder, value=None, required=False) %}
   <div class="form-field">
-    <input {% if value %}value="{{ value }}"{% endif %} {% if required %}required{% endif %} name="{{ name }}" type="number" placeholder="{{ placeholder }}{% if required %}*{% endif %}" steps="0.01" />
+    <input value="{% if value %}{{ value }}{% else %}0{% endif %}" {% if required %}required{% endif %} name="{{ name }}" type="number" placeholder="{{ placeholder }}{% if required %}*{% endif %}" steps="0.01" />
   </div>
 {% endmacro %}
 
