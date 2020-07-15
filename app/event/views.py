@@ -29,8 +29,8 @@ def create():
     if request.method == 'POST':
         try:
             new_event = Event(
-                #animal_id=Animal.id,
-                #doc_id=Doc.id,
+                animal_id=Animal.id,
+                doc_id=Doc.id,
                 titel=request.form.get('titel'),
                 time=request.form.get('time'),
                 topic=request.form.get('topic'),
