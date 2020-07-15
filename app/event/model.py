@@ -9,3 +9,5 @@ class Event(db.Model):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     user = db.relationship(User, foreign_keys=[user_id])
+    doc_id = db.Column(db.Integer, db.ForeignKey('doc.id'))
+    doc = db.relationship(Doc, foreign_keys[doc_id])
