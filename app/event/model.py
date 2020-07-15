@@ -10,7 +10,7 @@ class Event(db.Model):
     titel = db.Column(db.String(100), nullable=False)
     time = db.Column(db.DateTime, nullable=False)
     topic = db.Column(db.String(100))
-    notes = db.Column(db.String(100))
+    notes = db.Column(db.String(200))
     reminder = db.Column(db.Integer, nullable=False)
     animal_id = db.Column(db.Integer, db.ForeignKey('animal.id'))
     animal = db.relationship(Animal, foreign_keys=[animal_id])
