@@ -44,3 +44,28 @@ def create():
 
         return redirect(url_for('event.index'))
     return render_template('/events/create.html')
+
+@mod.route('/bearbeiten/<int:event_id>', methods=['GET', 'POST'])
+def update(event_id):
+    event_or_none = db.session.query(Event).filter_by(
+        id=event_id, user_id=current_user.id
+    ).one_or_none()
+
+    if event_or_none is None:
+        flash('Event wurde nicht gefunden.')
+        return redirect(url_for('event.details', event_id=event_id))
+
+    if request.method == 'POST':
+        try:
+            doc_or_none.titel = request.form.get('titel')
+            doc_or_none.time = request.form.get('time')
+            doc_or_none.topic = request.form.get('topic')
+            doc_or_none.notes = request.form.get('notes')
+            db.session.commit()
+        except Exception as e:
+            print(e)
+            return redirect(url_for('event.update', event_id=event_id))
+
+        return redirect(url_for('event.details', event_id=event_id))
+
+    return render_template('/events/update.html', item=doc_or_none)
