@@ -42,5 +42,5 @@ def create():
             print(e)
             pass
 
-        return redirect(url_for('doc.index'))
+        return redirect(url_for('event.index'))
     return render_template('/events/create.html')
