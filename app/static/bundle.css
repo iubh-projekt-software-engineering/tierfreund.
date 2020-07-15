@@ -22,7 +22,9 @@ p a {
 
 @media screen and (min-width: 1200px) {
   body {
-    background-color: #f8f8f8; } }
+    background-color: #f8f8f8; }
+  .wrapper {
+    padding-left: 20%; } }
 
 .inside {
   padding: 40px; }
