@@ -9,6 +9,8 @@ from flask import (
 from flask_login import current_user
 from app import db
 from app.event.model import Event
+from app.animal.model import Animal
+from app.doc.model import Doc
 
 mod = Blueprint('event', __name__, url_prefix='/termine')
 
