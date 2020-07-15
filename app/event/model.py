@@ -1,6 +1,6 @@
 from app import db
-from app.animal.models import Animal
-from app.doc.models import Doc
+from app.animal.model import Animal
+from app.doc.model import Doc
 
 
 class Event(db.Model):
@@ -14,4 +14,4 @@ class Event(db.Model):
     animal_id = db.Column(db.Integer, db.ForeignKey('animal.id'))
     animal = db.relationship(Animal, foreign_keys=[animal_id])
     doc_id = db.Column(db.Integer, db.ForeignKey('doc.id'))
-    doc = db.relationship(Doc, foreign_keys[doc_id])
+    doc = db.relationship(Doc, foreign_keys=[doc_id])
