@@ -69,3 +69,38 @@ def update(event_id):
         return redirect(url_for('event.details', event_id=event_id))
 
     return render_template('/events/update.html', item=doc_or_none)
+
+@mod.route('/details/<int:event_id>')
+def details(event_id):
+    event_or_none = db.session.query(Event).filter_by(
+        id=event_id, user_id=current_user.id
+    ).one_or_none()
+
+    if event_or_none is None:
+        flash('Das Event konnte leider nicht gefunden werden.')
+        return redirect(url_for('event.index'))
+
+    return render_template(
+        '/events/details.html',
+        item=event_or_none
+    )
+
+
+@mod.route('/loeschen/<int:event_id>', methods=['POST'])
+def delete(event_id):
+    event_or_none = db.session.query(Event).filter_by(
+        id=event_id, user_id=current_user.id
+    ).one_or_none()
+
+    if event_or_none is None:
+        flash('Das Event konnte leider nicht gefunden werden.')
+
+    try:
+        db.session.delete(event_or_none)
+        db.session.commit()
+    except Exception as e:
+        print(e)
+        flash('Das Event konnte leider nicht gelöscht werden.')
+
+    flash('Event erfolgreich gelöscht.')
+    return redirect(url_for('event.index'))
