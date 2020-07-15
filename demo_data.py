@@ -23,22 +23,38 @@ if __name__ == '__main__':
         'name': 'Struppy',
         'type': 1,
         'color': 'rgba(253, 187, 69, 1)',
-        'user_id': new_user.id
+        'race': 'Mischling',
+        'birthdate': '10.10.2010',
+        'weight': 70,
+        'user_id': new_user.id,
+        'notes': 'Bekommt 3 mal täglich Aspirin Complex. Das hilt immer.'
     }, {
         'name': 'Susanne',
         'type': 2,
         'color': 'rgba(247, 113, 97, 1)',
-        'user_id': new_user.id
+        'race': 'Mischling',
+        'birthdate': '10.10.2010',
+        'weight': 70,
+        'user_id': new_user.id,
+        'notes': 'Bekommt 3 mal täglich Aspirin Complex. Das hilt immer.'
     }, {
         'name': 'Ben',
         'type': 3,
         'color': 'rgba(32, 171, 98, 1)',
-        'user_id': new_user.id
+        'race': 'Mischling',
+        'birthdate': '10.10.2010',
+        'weight': 70,
+        'user_id': new_user.id,
+        'notes': 'Bekommt 3 mal täglich Aspirin Complex. Das hilt immer.'
     }, {
         'name': 'Frank',
         'type': 4,
         'color': 'rgba(214, 86, 15, 1)',
-        'user_id': new_user.id
+        'race': 'Mischling',
+        'weight': 70,
+        'birthdate': '10.10.2010',
+        'user_id': new_user.id,
+        'notes': 'Bekommt 3 mal täglich Aspirin Complex. Das hilt immer.'
     })
 
     for animal in animals:
