@@ -418,7 +418,9 @@ input[type="submit"] {
   height: 60px;
   border-radius: 50%;
   background-color: #323434;
-  position: relative; }
+  position: fixed;
+  top: 20px;
+  right: 20px; }
   .onboarding--stage_next img {
     position: absolute;
     top: 50%;
