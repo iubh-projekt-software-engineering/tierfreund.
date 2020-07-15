@@ -1,5 +1,6 @@
 from app import db
 from app.user.models import User
+from app.doc.models import Doc
 
 
 class Event(db.Model):
