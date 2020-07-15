@@ -21,18 +21,23 @@ if __name__ == '__main__':
 
     animals = ({
         'name': 'Struppy',
-        'type': 0,
-        'color': 'blue',
+        'type': 1,
+        'color': 'rgba(253, 187, 69, 1)',
         'user_id': new_user.id
     }, {
         'name': 'Susanne',
-        'type': 0,
-        'color': 'red',
+        'type': 2,
+        'color': 'rgba(247, 113, 97, 1)',
         'user_id': new_user.id
     }, {
-        'name': 'Peter',
-        'type': 1,
-        'color': 'black',
+        'name': 'Ben',
+        'type': 3,
+        'color': 'rgba(32, 171, 98, 1)',
+        'user_id': new_user.id
+    }, {
+        'name': 'Frank',
+        'type': 4,
+        'color': 'rgba(214, 86, 15, 1)',
         'user_id': new_user.id
     })
 
