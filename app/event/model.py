@@ -1,6 +1,6 @@
 from app import db
-from app.animal.models import Animal
-from app.doc.models import Doc
+from app.animal.model import Animal
+from app.doc.model import Doc
 
 
 class Event(db.Model):
