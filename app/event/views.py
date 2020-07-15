@@ -26,4 +26,21 @@ def index():
 
 @mod.route('/erstellen', methods=['GET', 'POST'])
 def create():
+    if request.method == 'POST':
+        try:
+            new_event = Event(
+                animal_id=Animal.id,
+                doc_id=Doc.id,
+                titel=request.form.get('titel'),
+                time=request.form.get('time'),
+                topic=request.form.get('topic'),
+                notes=request.form.get('notes'),
+            )
+            db.session.add(new_event)
+            db.session.commit()
+        except Exception as e:
+            print(e)
+            pass
+
+        return redirect(url_for('doc.index'))
     return render_template('/events/create.html')
