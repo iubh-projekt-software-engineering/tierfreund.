@@ -11,3 +11,8 @@ from app import db
 from app.event.model import Event
 
 mod = Blueprint('event', __name__, url_prefix='/termine')
+
+@mod.route('/')
+def index():
+    events = db.session.query(Event).filter_by(user_id=current_user.id).all()
+    
