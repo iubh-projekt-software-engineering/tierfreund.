@@ -23,3 +23,7 @@ def index():
         events=events,
         create_url=create_url
     )
+
+@mod.route('/erstellen', methods=['GET', 'POST'])
+def create():
+    return render_template('/events/create.html')
