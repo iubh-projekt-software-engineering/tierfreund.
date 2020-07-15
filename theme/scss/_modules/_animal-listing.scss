@@ -1,3 +1,15 @@
 .animal-listing .animal-listing-item {
     margin-bottom: 40px;
 }
+
+@media screen and (min-width: $desktop) {
+    .animal-listing .inside {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .animal-listing .animal-listing-item {
+        width: 50%;
+        border: 20px solid transparent;
+    }
+}
