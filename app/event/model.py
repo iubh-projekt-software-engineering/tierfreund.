@@ -1,5 +1,5 @@
 from app import db
-from app.user.models import Animal
+from app.animal.models import Animal
 from app.doc.models import Doc
 
 
