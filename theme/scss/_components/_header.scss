@@ -23,3 +23,10 @@
 .header.is--active .logo {
     color: $white;
 }
+
+@media screen and (min-width: $desktop) {
+    .header {
+        width: 20%;
+        background-color: $white;
+    }
+}

@@ -20,6 +20,10 @@ p a {
   font-weight: 700;
   font-style: normal; }
 
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: #f8f8f8; } }
+
 .inside {
   padding: 40px; }
 
@@ -164,6 +168,11 @@ input[type="submit"] {
 .header.is--active .logo {
   color: white; }
 
+@media screen and (min-width: 1200px) {
+  .header {
+    width: 20%;
+    background-color: white; } }
+
 .logo {
   font-size: 18px;
   text-decoration: none;
@@ -171,6 +180,10 @@ input[type="submit"] {
   font-family: sofia-pro, sans-serif;
   font-weight: 700;
   font-style: normal; }
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 30px; } }
 
 .burger {
   width: 40px;
@@ -209,6 +222,10 @@ input[type="submit"] {
   .burger.is--active .line:nth-child(3) {
     transform: translateY(0) rotate(-45deg); }
 
+@media screen and (min-width: 1200px) {
+  .burger {
+    display: none; } }
+
 .navigation {
   background-color: #323434;
   position: fixed;
@@ -237,6 +254,17 @@ input[type="submit"] {
   color: white;
   font-size: 24px;
   margin-bottom: 50px; }
+
+@media screen and (min-width: 1200px) {
+  .navigation {
+    width: 20%;
+    background-color: white;
+    transform: translateX(0); }
+  .navigation .link {
+    color: #323434;
+    font-family: sofia-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal; } }
 
 .animal-listing-item .inner-item {
   border-radius: 20px;

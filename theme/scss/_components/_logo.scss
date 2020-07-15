@@ -4,3 +4,9 @@
     color: $black;
     @include bold;
 }
+
+@media screen and (min-width: $desktop) {
+    .logo {
+        font-size: 30px;
+    }
+}
