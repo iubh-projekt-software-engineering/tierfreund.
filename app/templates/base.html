@@ -16,7 +16,7 @@
     <script>
       const toastMessages = [
     {% for message in messages %}
-      {{ message }}{% if not loop.last %},{% endif %}
+      '{{ message }}'{% if not loop.last %},{% endif %}
     {% endfor %}
     ]
     </script>

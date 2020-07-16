@@ -1,4 +1,13 @@
 import Stepmation from './stepmation';
+import toastr from 'toastr';
+
+
+
+if (window.toastMessages) {
+    window.toastMessages.forEach((message) => {
+        toastr.info(message);
+    });
+}
 
 if (document.querySelector('.onboarding--stage')) {
   const myStepmation = new Stepmation(document.querySelector('.onboarding--stage'));
