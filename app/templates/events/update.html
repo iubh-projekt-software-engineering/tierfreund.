@@ -1,0 +1,19 @@
+{% extends 'dashboard_base.html' %}
+{% from 'macros/form.html' import text, submit, cancel %}
+
+{% block main %}
+
+    <form class="form-box" method="POST" action="{{ url_for('event.update', event_id=event.id) }}">
+        <div class="inside">
+
+            {{ text('name', 'Namen eingeben', required=True, value=item.titel) }}
+            {{ date('date', 'Datum eingeben', required=True, value=item.time) }}
+            {{ text('topic', 'Termingrund eingeben', required=True, value=item.topic) }}
+            {{ textarea('notes', 'Beschreibung eingeben', value=item.notes) }}
+            {{ submit('Termin speichern.') }}
+            {{ cancel('Abbrechen.') }}
+
+        </div>
+    </form>
+
+{% endblock %}
