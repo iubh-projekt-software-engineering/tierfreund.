@@ -5,7 +5,9 @@
 
   <div class="animal-details">
 
-    <div class="stage" style="background-color: {{item.color}}"></div>
+    <div class="stage" style="background-color: {{item.color}}">
+      <img class="stage__image" src="{% if item.type == 1 %}{{ url_for('static', filename='illustration-hund.svg') }}{% elif item.type == 2 %}{{ url_for('static', filename='illustration-katze.svg') }}{% elif item.type == 3 %}{{ url_for('static', filename='illustration-fisch.svg') }}{% elif item.type == 4 %}{{ url_for('static', filename='illustration-maus.svg') }}{% elif item.type == 5 %}{{ url_for('static', filename='illustration-vogel.svg') }}{% endif %}" />
+    </div>
     <div class="inside">
 
       <div class="head">
