@@ -1,0 +1,13 @@
+.animal-slider .inside {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+}
+.animal-slider .animal-listing-item {
+    width: 300px;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    flex: 0 0 auto;
+}

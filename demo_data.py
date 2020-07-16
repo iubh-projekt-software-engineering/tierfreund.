@@ -62,6 +62,9 @@ if __name__ == '__main__':
             new_animal = Animal(**animal)
             db.session.add(new_animal)
             db.session.commit()
+            new_animal = Animal(**animal)
+            db.session.add(new_animal)
+            db.session.commit()
         except Exception as e:
             print(e)
             pass
