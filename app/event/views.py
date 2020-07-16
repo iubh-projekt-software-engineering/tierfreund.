@@ -99,9 +99,9 @@ def delete(event_id):
     try:
         db.session.delete(event_or_none)
         db.session.commit()
+        flash('Event erfolgreich gelöscht.')
     except Exception as e:
         print(e)
         flash('Das Event konnte leider nicht gelöscht werden.')
 
-    flash('Event erfolgreich gelöscht.')
     return redirect(url_for('event.index'))
