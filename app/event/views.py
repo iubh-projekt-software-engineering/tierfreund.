@@ -105,4 +105,3 @@ def delete(event_id):
         flash('Das Event konnte leider nicht gelöscht werden.')
         return redirect(url_for('event.details', event_id=event_id))
     return redirect(url_for('event.index'))
-    
