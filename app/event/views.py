@@ -40,7 +40,7 @@ def create():
             db.session.commit()
         except Exception as e:
             flash('Das Event konnte leider nicht erstellt werden.')
-            pass
+            return redirect(url_for('event.create'))
 
         return redirect(url_for('event.index'))
     return render_template('/events/create.html')
