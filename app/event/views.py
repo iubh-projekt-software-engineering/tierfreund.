@@ -53,7 +53,7 @@ def update(event_id):
 
     if event_or_none is None:
         flash('Event wurde nicht gefunden.')
-        return redirect(url_for('event.details', event_id=event_id))
+        return redirect(url_for('event.index'))
 
     if request.method == 'POST':
         try:
