@@ -42,8 +42,10 @@ def create():
             )
             db.session.add(new_animal)
             db.session.commit()
+            flash('Tier wurde erfolgreich erstellt.')
         except Exception as e:
             print(e)
+            flash('Tier konnte nicht erstellt werden')
             pass
 
         return redirect(url_for('animal.index'))
