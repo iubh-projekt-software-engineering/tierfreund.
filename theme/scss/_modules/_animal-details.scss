@@ -1,5 +1,13 @@
 .animal-details .stage {
     height: 280px;
+    position: relative;
+}
+.animal-details .stage__image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 105%;
 }
 .animal-details .head {
     text-align: center;
