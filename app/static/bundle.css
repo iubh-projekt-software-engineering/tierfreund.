@@ -443,8 +443,15 @@ input[type="submit"] {
 .animal-listing .animal-listing-item {
   margin-bottom: 40px; }
 
+.animal-listing__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal; }
+
 @media screen and (min-width: 1200px) {
-  .animal-listing .inside {
+  .animal-listing__items {
     display: flex;
     flex-wrap: wrap; }
   .animal-listing .animal-listing-item {
@@ -524,12 +531,19 @@ input[type="submit"] {
   .animal-details .actions .button {
     margin-bottom: 20px; }
 
-.animal-slider .inside {
+.animal-slider__items {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap; }
+
+.animal-slider__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal; }
 
 .animal-slider .animal-listing-item {
   width: 300px;

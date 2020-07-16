@@ -1,9 +1,14 @@
-.animal-slider .inside {
+.animal-slider__items {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
     display: flex;
     flex-wrap: nowrap;
+}
+.animal-slider__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    @include bold;
 }
 .animal-slider .animal-listing-item {
     width: 300px;

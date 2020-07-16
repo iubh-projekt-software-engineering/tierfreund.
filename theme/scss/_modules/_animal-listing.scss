@@ -1,9 +1,14 @@
 .animal-listing .animal-listing-item {
     margin-bottom: 40px;
 }
+.animal-listing__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    @include bold;
+}
 
 @media screen and (min-width: $desktop) {
-    .animal-listing .inside {
+    .animal-listing__items {
         display: flex;
         flex-wrap: wrap;
     }
