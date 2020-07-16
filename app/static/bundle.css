@@ -521,7 +521,7 @@ input[type="submit"] {
   overflow-y: hidden;
   white-space: nowrap;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: nowrap; }
 
 .animal-slider .animal-listing-item {
   width: 300px;
