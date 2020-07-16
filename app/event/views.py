@@ -63,7 +63,7 @@ def update(event_id):
             doc_or_none.notes = request.form.get('notes')
             db.session.commit()
         except Exception as e:
-            print(e)
+            flash('Das Event konnte leider nicht bearbeitet werden.')
             return redirect(url_for('event.update', event_id=event_id))
 
         return redirect(url_for('event.details', event_id=event_id))
