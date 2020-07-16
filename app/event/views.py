@@ -94,6 +94,7 @@ def delete(event_id):
 
     if event_or_none is None:
         flash('Das Event konnte leider nicht gefunden werden.')
+        return redirect(url_for('event.details', event_id=event_id))
 
     try:
         db.session.delete(event_or_none)
