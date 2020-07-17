@@ -6,7 +6,6 @@
     <form class="form-box" method="POST" action="{{ url_for('event.create') }}">
         <div class="inside">
 
-            {{ text('name', 'Namen eingeben', required=True) }}
             {{ date('date', 'Datum eingeben', required=True) }}
             {{ text('topic', 'Termingrund eingeben', required=True) }}
             {{ select('animal_id', animals) }}
