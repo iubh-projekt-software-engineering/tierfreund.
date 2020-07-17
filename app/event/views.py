@@ -43,8 +43,15 @@ def create():
             return redirect(url_for('event.create'))
 
         return redirect(url_for('event.index'))
-    animals = db.session.query(Animal).filter_by(user_id=current_user.id).all()
-    return render_template('/events/create.html', animal=animal)
+    animals = [
+        {
+            'value': animal.id,
+            'label': animal.name
+        }
+        for animal 
+        in db.session.query(Animal).filter_by(user_id=current_user.id).all()
+    ]
+    return render_template('/events/create.html', animals=animals)
 
 @mod.route('/bearbeiten/<int:event_id>', methods=['GET', 'POST'])
 def update(event_id):
