@@ -14,10 +14,10 @@
         <div class="event-details__content">
 
           <div class="event-details__upcoming">
-            <p class="event-details__titel">{{ item.titel }}</p>
-            <p class="event-details__event-titel">Anstehende Termine</p>
+            <p class="event-details__name">{{ item.titel }}</p>
+            <p class="event-details__event__text">Anstehende Termine</p>
           </div>
-
+          
           {% if item.time %}
             <div class="event-details__date-content">
               <div class="event-details__date">{{ item.time }}</div>
@@ -27,7 +27,7 @@
 
           {% if item.notes %}
             <div class="event-details__notes-content">
-              <div class="event-details__event-notes">Beschreibung.</div>
+              <div class="event-details__notes__text">Beschreibung.</div>
               <div class="event-details__notes">{{ item.notes }}</div>
             </div>
           {% endif %}
