@@ -7,6 +7,7 @@ if __name__ == '__main__':
     from app.animal.model import Animal
     from app.doc.model import Doc
     from app.event.model import Event
+    from datetime import datetime
 
     new_user = User(
         username='demo',
@@ -105,21 +106,21 @@ if __name__ == '__main__':
 
     events = ({
         'titel': 'Testevent1',
-        'time': '11/08/2020',
+        'time': datetime(2020, 8, 15, 14, 30),
         'topic': 'Testimpfung1',
         'notes': 'Hier kommt die Spritze!',
         'animal_id': new_animal.id,
         'doc_id': new_doc.id,
     }, {
         'titel': 'Testevent2',
-        'time': '12/08/2020',
+        'time': datetime(2020, 8, 16, 15, 00),
         'topic': 'Testimpfung2',
         'notes': 'Hier kommt die Spritze!',
         'animal_id': new_animal.id,
         'doc_id': new_doc.id,
     }, {
         'titel': 'Testevent3',
-        'time': '13/08/2020',
+        'time': datetime(2020, 8, 17, 15, 30),
         'topic': 'Testimpfung3',
         'notes': 'Hier kommt die Spritze!',
         'animal_id': new_animal.id,
