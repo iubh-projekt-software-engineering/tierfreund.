@@ -16,7 +16,7 @@ mod = Blueprint('event', __name__, url_prefix='/termine')
 
 @mod.route('/')
 def index():
-    events = db.session.query(Event).filter_by(user_id=current_user.id).all()
+    events = db.session.query(Event).join(Animal).filter(Animal.user_id==current_user.id).all()
     create_url = url_for('event.create')
     return render_template(
         '/events/index.html',
