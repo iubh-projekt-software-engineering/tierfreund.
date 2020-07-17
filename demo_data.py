@@ -5,6 +5,7 @@ if __name__ == '__main__':
     from app import db
     from app.user.models import User
     from app.animal.model import Animal
+    from app.doc.model import Doc
 
     new_user = User(
         username='demo',
@@ -88,8 +89,14 @@ if __name__ == '__main__':
             new_animal = Animal(**animal)
             db.session.add(new_animal)
             db.session.commit()
-            new_animal = Animal(**animal)
-            db.session.add(new_animal)
+        except Exception as e:
+            print(e)
+            pass
+
+    for doc in docs:
+        try:
+            new_doc = Doc(**doc)
+            db.session.add(new_doc)
             db.session.commit()
         except Exception as e:
             print(e)
