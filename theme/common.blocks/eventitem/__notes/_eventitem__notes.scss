@@ -1,0 +1,10 @@
+.eventitem__notes {
+  font-size: 18px;
+  color: $yellow;
+}
+
+.eventitem__text {
+  font-size: 18px;
+  color: $yellow;
+  @include bold;
+}
