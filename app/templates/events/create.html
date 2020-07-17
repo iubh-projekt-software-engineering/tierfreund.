@@ -9,6 +9,7 @@
             {{ text('name', 'Namen eingeben', required=True) }}
             {{ date('date', 'Datum eingeben', required=True) }}
             {{ text('topic', 'Termingrund eingeben', required=True) }}
+            {{ select('animal_id', animals) }}
             {{ textarea('notes', 'Beschreibung eingeben') }}
             {{ submit('Termin speichern.') }}
             {{ cancel('Abbrechen.') }}
