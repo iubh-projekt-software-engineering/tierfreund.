@@ -31,7 +31,6 @@ def create():
             new_event = Event(
                 animal_id=request.form.get('animal_id'),
                 doc_id=request.form.get('doc_id'),
-                titel=request.form.get('titel'),
                 time=request.form.get('time'),
                 topic=request.form.get('topic'),
                 notes=request.form.get('notes'),
@@ -39,6 +38,7 @@ def create():
             db.session.add(new_event)
             db.session.commit()
         except Exception as e:
+            print(e)
             flash('Das Event konnte leider nicht erstellt werden.')
             return redirect(url_for('event.create'))
 
