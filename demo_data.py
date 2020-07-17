@@ -57,6 +57,32 @@ if __name__ == '__main__':
         'notes': 'Bekommt 3 mal täglich Aspirin Complex. Das hilt immer.'
     })
 
+    docs = ({
+        'name': 'Dr. Test1',
+        'street': 'Teststraße1',
+        'zip': '51427',
+        'city': 'Teststadt',
+        'phonenumber': '0123 456 78 09',
+        'email': 'info@muster-dr.de',
+        'user_id': new_user.id,
+    }, {
+        'name': 'Dr. Test2',
+        'street': 'Teststraße2',
+        'zip': '51427',
+        'city': 'Teststadt',
+        'phonenumber': '0123 456 78 09',
+        'email': 'info@muster-dr.de',
+        'user_id': new_user.id,
+    }, {
+        'name': 'Dr. Test3',
+        'street': 'Teststraße3',
+        'zip': '51427',
+        'city': 'Teststadt',
+        'phonenumber': '0123 456 78 09',
+        'email': 'info@muster-dr.de',
+        'user_id': new_user.id,
+    })
+
     for animal in animals:
         try:
             new_animal = Animal(**animal)
@@ -68,5 +94,3 @@ if __name__ == '__main__':
         except Exception as e:
             print(e)
             pass
-
-    
