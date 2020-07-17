@@ -6,6 +6,7 @@ if __name__ == '__main__':
     from app.user.models import User
     from app.animal.model import Animal
     from app.doc.model import Doc
+    from app.event.model import Event
 
     new_user = User(
         username='demo',
@@ -97,6 +98,38 @@ if __name__ == '__main__':
         try:
             new_doc = Doc(**doc)
             db.session.add(new_doc)
+            db.session.commit()
+        except Exception as e:
+            print(e)
+            pass
+
+    events = ({
+        'titel': 'Testevent1',
+        'time': '11/08/2020',
+        'topic': 'Testimpfung1',
+        'notes': 'Hier kommt die Spritze!',
+        'animal_id': new_animal.id,
+        'doc_id': new_doc.id,
+    }, {
+        'titel': 'Testevent2',
+        'time': '12/08/2020',
+        'topic': 'Testimpfung2',
+        'notes': 'Hier kommt die Spritze!',
+        'animal_id': new_animal.id,
+        'doc_id': new_doc.id,
+    }, {
+        'titel': 'Testevent3',
+        'time': '13/08/2020',
+        'topic': 'Testimpfung3',
+        'notes': 'Hier kommt die Spritze!',
+        'animal_id': new_animal.id,
+        'doc_id': new_doc.id,
+    })
+
+    for event in events:
+        try:
+            new_event = Event(**event)
+            db.session.add(new_event)
             db.session.commit()
         except Exception as e:
             print(e)
