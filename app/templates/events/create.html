@@ -10,6 +10,7 @@
             {{ date('date', 'Datum eingeben', required=True) }}
             {{ text('topic', 'Termingrund eingeben', required=True) }}
             {{ select('animal_id', animals) }}
+            {{ select('doc_id', docs) }}
             {{ textarea('notes', 'Beschreibung eingeben') }}
             {{ submit('Termin speichern.') }}
             {{ cancel('Abbrechen.') }}
