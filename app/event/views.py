@@ -51,7 +51,15 @@ def create():
         for animal 
         in db.session.query(Animal).filter_by(user_id=current_user.id).all()
     ]
-    return render_template('/events/create.html', animals=animals)
+    docs = [
+        {
+            'value': doc.id,
+            'label': doc.name
+        }
+        for doc 
+        in db.session.query(Doc).filter_by(user_id=current_user.id).all()
+    ]
+    return render_template('/events/create.html', animals=animals, docs=docs)
 
 @mod.route('/bearbeiten/<int:event_id>', methods=['GET', 'POST'])
 def update(event_id):
