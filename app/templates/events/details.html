@@ -15,7 +15,7 @@
 
           <div class="event-details__upcoming">
             <p class="event-details__name">{{ item.titel }}</p>
-            <p class="event-details__event-titel">Anstehende Termine</p>
+            <p class="event-details__event-text">Anstehende Termine</p>
           </div>
 
           {% if item.time %}
@@ -27,7 +27,7 @@
 
           {% if item.notes %}
             <div class="event-details__notes-content">
-              <div class="event-details__event-notes">Beschreibung.</div>
+              <div class="event-details__notes-text">Beschreibung.</div>
               <div class="event-details__notes">{{ item.notes }}</div>
             </div>
           {% endif %}
