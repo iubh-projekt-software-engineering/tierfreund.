@@ -473,7 +473,7 @@ input[type="submit"] {
   position: relative;
   margin-bottom: 20px; }
 
-select {
+input, select {
   border-width: 1px;
   border-style: solid;
   border-color: #323434;
@@ -481,19 +481,23 @@ select {
   width: 100%;
   heigth: 60px;
   line-height: 60px;
+  box-sizing: border-box;
   font-size: 18px;
   padding-left: 20px;
-  padding-right: 20px; }
-  select::-moz-placeholder {
+  padding-right: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  input::-moz-placeholder, select::-moz-placeholder {
     opacity: 1;
     color: #323434; }
-  select:-ms-input-placeholder {
+  input:-ms-input-placeholder, select:-ms-input-placeholder {
     opacity: 1;
     color: #323434; }
-  select::-ms-input-placeholder {
+  input::-ms-input-placeholder, select::-ms-input-placeholder {
     opacity: 1;
     color: #323434; }
-  select::placeholder {
+  input::placeholder, select::placeholder {
     opacity: 1;
     color: #323434; }
 
