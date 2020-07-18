@@ -10,14 +10,14 @@
   </div>
 {% endmacro %}
 
-{% macro password(name="password", value=None) %}
+{% macro password(name="password", required=True, value=None) %}
   <div class="form-field">
     <input {% if value %}value="{{ value }}"{% endif %} {% if required %}required{% endif %} name="{{ name }}" type="password" placeholder="Passwort" />
     <img class="js--password-toggler" src="{{ url_for('static', filename='awesome-eye.svg') }}" />
   </div>
 {% endmacro %}
 
-{% macro date(name, placeholder, required=False, value=None) %}
+{% macro date(name, placeholder, required=True, value=None) %}
   <div class="form-field">
     <input {% if value %}value="{{ value }} "{% endif %} {% if required %}required{% endif %} name="{{ name }}" type="date" placeholder="{{ placeholder }}{% if required %}*{% endif %}" />
   </div>
@@ -53,7 +53,7 @@
   </div>
 {% endmacro %}
 
-{% macro select(name, options, value=None, required=False) %}
+{% macro select(name, options, value=None, required=True) %}
   <div class="form-field">
     <select name="{{name}}" {% if required %}required{% endif %}>
       {% for option in options %}
