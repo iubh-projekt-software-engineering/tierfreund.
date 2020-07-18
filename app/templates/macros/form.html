@@ -53,9 +53,9 @@
   </div>
 {% endmacro %}
 
-{% macro select(name, options, value=None) %}
+{% macro select(name, options, value=None, required=False) %}
   <div class="form-field">
-    <select name="{{name}}">
+    <select name="{{name}}" {% if required %}required{% endif %}>
       {% for option in options %}
         <option value="{{ option.value}}" {% if value == option.value %}selected{% endif %}>{{ option.label }}</option>
       {% endfor %}
