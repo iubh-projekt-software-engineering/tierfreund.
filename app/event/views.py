@@ -8,6 +8,7 @@ from flask import (
 )
 from flask_login import current_user
 from app import db
+from datetime import datetime
 from app.event.model import Event
 from app.animal.model import Animal
 from app.doc.model import Doc
@@ -28,10 +29,11 @@ def index():
 def create():
     if request.method == 'POST':
         try:
+            new_date = datetime.strptime(request.form.get('date'), '%Y-%m-%d')
             new_event = Event(
                 animal_id=request.form.get('animal_id'),
                 doc_id=request.form.get('doc_id'),
-                time=request.form.get('time'),
+                time=new_date,
                 topic=request.form.get('topic'),
                 notes=request.form.get('notes'),
             )
@@ -48,7 +50,7 @@ def create():
             'value': animal.id,
             'label': animal.name
         }
-        for animal 
+        for animal
         in db.session.query(Animal).filter_by(user_id=current_user.id).all()
     ]
     docs = [
@@ -56,7 +58,7 @@ def create():
             'value': doc.id,
             'label': doc.name
         }
-        for doc 
+        for doc
         in db.session.query(Doc).filter_by(user_id=current_user.id).all()
     ]
     return render_template('/events/create.html', animals=animals, docs=docs)

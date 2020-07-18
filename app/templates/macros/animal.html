@@ -1,4 +1,4 @@
-{% macro item(id, name, type, race, color='black') %}
+{% macro animal_item(id, name, type, race, color='black') %}
     <div class="animal-listing-item">
         <a href="{{ url_for('animal.details', animal_id=id)}}" class="inner-item">
 
