@@ -1,5 +1,5 @@
 {% extends 'dashboard_base.html' %}
-{% from 'macros/animal.html' import item %}
+{% from 'macros/animal.html' import animal_item %}
 
 {% block main %}
 
@@ -10,7 +10,7 @@
 
             <div class="animal-listing__items">
                 {% for animal in animals %}
-                    {{ item(id=animal.id, name=animal.name, type=animal.type, color=animal.color, race=animal.race) }}
+                    {{ animal_item(id=animal.id, name=animal.name, type=animal.type, color=animal.color, race=animal.race) }}
                 {% endfor %}
             </div>
 
