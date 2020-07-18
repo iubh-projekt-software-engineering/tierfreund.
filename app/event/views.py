@@ -29,11 +29,13 @@ def index():
 def create():
     if request.method == 'POST':
         try:
-            new_date = datetime.strptime(request.form.get('date'), '%Y-%m-%d')
+            time = request.form.get('time')
+            time_old = time.replace('T', ' ')
+            time_new = datetime.strptime(time_old, '%Y-%m-%d %H:%M')
             new_event = Event(
                 animal_id=request.form.get('animal_id'),
                 doc_id=request.form.get('doc_id'),
-                time=new_date,
+                time=time_new,
                 topic=request.form.get('topic'),
                 notes=request.form.get('notes'),
             )

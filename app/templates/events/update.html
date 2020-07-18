@@ -1,13 +1,12 @@
 {% extends 'dashboard_base.html' %}
-{% from 'macros/form.html' import text, submit, cancel, date, textarea, select %}
+{% from 'macros/form.html' import text, submit, cancel , textarea, select, datetime %}
 
 {% block main %}
 
     <form class="form-box" method="POST" action="{{ url_for('event.update', event_id=item.id) }}">
         <div class="inside">
 
-            {{ text('name', 'Namen eingeben', required=True, value=item.titel) }}
-            {{ date('date', 'Datum eingeben', required=True, value=item.time) }}
+            {{ datetime('time', 'Zeit eingeben', required=True, value=item.time) }}
             {{ text('topic', 'Termingrund eingeben', required=True, value=item.topic) }}
             {{ select('animal_id', animals, value=item.animal_id) }}
             {{ select('doc_id', docs, value=item.doc_id) }}
