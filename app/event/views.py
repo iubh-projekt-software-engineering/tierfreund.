@@ -65,8 +65,8 @@ def create():
 
 @mod.route('/bearbeiten/<int:event_id>', methods=['GET', 'POST'])
 def update(event_id):
-    event_or_none = db.session.query(Event).filter_by(
-        id=event_id, user_id=current_user.id
+    event_or_none = db.session.query(Event).join(Animal).filter(
+        Event.id ==event_id, Animal.user_id == current_user.id
     ).one_or_none()
 
     if event_or_none is None:
@@ -75,18 +75,39 @@ def update(event_id):
 
     if request.method == 'POST':
         try:
-            doc_or_none.titel = request.form.get('titel')
-            doc_or_none.time = request.form.get('time')
-            doc_or_none.topic = request.form.get('topic')
-            doc_or_none.notes = request.form.get('notes')
+            event_or_none.time = datetime.strptime(request.form.get('date'), '%Y-%m-%d')
+            event_or_none.topic = request.form.get('topic')
+            event_or_none.notes = request.form.get('notes')
+            event_or_none.doc_id = request.form.get('doc_id')
+            event_or_none.animal_id = request.form.get('animal_id')
             db.session.commit()
         except Exception as e:
             flash('Das Event konnte leider nicht bearbeitet werden.')
             return redirect(url_for('event.update', event_id=event_id))
 
         return redirect(url_for('event.details', event_id=event_id))
-
-    return render_template('/events/update.html', item=doc_or_none)
+    animals = [
+        {
+            'value': animal.id,
+            'label': animal.name
+        }
+        for animal
+        in db.session.query(Animal).filter_by(user_id=current_user.id).all()
+    ]
+    docs = [
+        {
+            'value': doc.id,
+            'label': doc.name
+        }
+        for doc
+        in db.session.query(Doc).filter_by(user_id=current_user.id).all()
+    ]
+    return render_template(
+        '/events/update.html',
+        item=event_or_none,
+        animals=animals,
+        docs=docs
+    )
 
 @mod.route('/details/<int:event_id>')
 def details(event_id):

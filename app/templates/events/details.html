@@ -17,12 +17,10 @@
             <p class="event-details__name">{{ item.Animal.name }}</p>
           </div>
 
-          {% if item.Event.time %}
-            <div class="event-details__date-content">
-              <div class="event-details__date"> {{ item.Event.time }}</div>
-              <div class="event-details__topic">{{ item.Event.topic }}</div>
-            </div>
-          {% endif %}
+          <div class="event-details__date-content">
+            <div class="event-details__date"> {{ item.Event.time }}</div>
+            <div class="event-details__topic">{{ item.Event.topic }}</div>
+          </div>
 
           {% if item.Event.notes %}
             <div class="event-details__notes-content">

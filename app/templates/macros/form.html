@@ -47,10 +47,10 @@
   </div>
 {% endmacro %}
 
-{% macro select(name, options) %}
+{% macro select(name, options, value=None) %}
   <select name="{{name}}">
     {% for option in options %}
-      <option value="{{ option.value}}">{{ option.label }}</option>
+      <option value="{{ option.value}}" {% if value == option.value %}selected{% endif %}>{{ option.label }}</option>
     {% endfor %}
   </select>
 {% endmacro %}
