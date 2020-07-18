@@ -1,0 +1,15 @@
+{% macro event_item(id, titel, time, topic, notes) %}
+    <div class="event-listing-item">
+        <a href="{{ url_for('event.details', event_id=id)}}" class="inner-item">
+
+            <div class="data">
+
+                <div class="data-content">
+                    {% if titel %}
+                        <p class="data-content__titel">{{ event_item.titel }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </a>
+    </div>
+{% endmacro %}
