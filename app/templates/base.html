@@ -14,7 +14,7 @@
     {% with messages = get_flashed_messages() %}
     {% if messages %}
     <script>
-      const toastMessages = [
+      window.toastMessages = [
     {% for message in messages %}
       '{{ message }}'{% if not loop.last %},{% endif %}
     {% endfor %}
