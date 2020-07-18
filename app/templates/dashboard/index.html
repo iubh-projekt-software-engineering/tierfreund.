@@ -1,5 +1,6 @@
 {% extends 'dashboard_base.html' %}
-{% from 'macros/animal.html' import item %}
+{% from 'macros/animal.html' import animal_item %}
+{% from 'macros/event.html' import event_item %}
 
 {% block main %}
 
@@ -17,7 +18,7 @@
 
             <div class="animal-slider__items">
                 {% for animal in animals %}
-                    {{ item(id=animal.id, name=animal.name, type=animal.type, color=animal.color, race=animal.race) }}
+                    {{ animal_item(id=animal.id, name=animal.name, type=animal.type, color=animal.color, race=animal.race) }}
                 {% endfor %}
             </div>
 
@@ -31,7 +32,7 @@
 
         <div class="event-listing__items">
           {% for event in events %}
-            {{ item(id=event.id, name=event.titel, date=event.time, topic=event.topic) }}
+            {{ event_item(id=event.id, titel=event.titel, time=event.time, topic=event.topic, notes=event.notes) }}
           {% endfor %}
         </div>
       </div>
