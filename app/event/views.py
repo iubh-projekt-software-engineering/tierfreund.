@@ -90,7 +90,7 @@ def update(event_id):
 
 @mod.route('/details/<int:event_id>')
 def details(event_id):
-    event_or_none = db.session.query(Event).join(Animal).filter(
+    event_or_none = db.session.query(Event, Animal, Doc).join(Animal).join(Doc).filter(
         Event.id==event_id, Animal.user_id==current_user.id
     ).one_or_none()
 

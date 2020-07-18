@@ -3,36 +3,37 @@
 
 {% block main %}
 
+
   <div class="event-details">
     <div class="event-details__inside">
 
-        <div class="event-details__stage">
-          <img class="event-details__stage-image" src="{{ url_for('static', filename='illustration-hund.svg') }}" />
+        <div class="event-details__stage" style="background-color: {{ item.Animal.color }}">
+          <img class="event-details__stage-image" src="{% if item.Animal.type == 1 %}{{ url_for('static', filename='illustration-hund.svg') }}{% elif item.Animal.type == 2 %}{{ url_for('static', filename='illustration-katze.svg') }}{% elif item.Animal.type == 3 %}{{ url_for('static', filename='illustration-fisch.svg') }}{% elif item.Animal.type == 4 %}{{ url_for('static', filename='illustration-maus.svg') }}{% elif item.Animal.type == 5 %}{{ url_for('static', filename='illustration-vogel.svg') }}{% endif %}" />
         </div>
 
         <div class="event-details__content">
 
           <div class="event-details__upcoming">
-            <p class="event-details__name">{{ item.titel }}</p>
+            <p class="event-details__name"></p>
           </div>
 
           {% if item.time %}
             <div class="event-details__date-content">
-              <div class="event-details__date">{{ event_item.time }}</div>
-              <div class="event-details__topic">{{ event_item.topic }}</div>
+              <div class="event-details__date"></div>
+              <div class="event-details__topic"></div>
             </div>
           {% endif %}
 
           {% if item.notes %}
             <div class="event-details__notes-content">
               <div class="event-details__notes__text">Beschreibung.</div>
-              <div class="event-details__notes">{{ event_item.notes }}</div>
+              <div class="event-details__notes"></div>
             </div>
           {% endif %}
 
 
-          <a class="button event-details__button" href="{{ url_for('event.update', event_id=item.id) }}">Erinnerung bearbeiten</a>
-          <form method="POST" action="{{ url_for('event.delete', event_id=item.id) }}" onsubmit="return confirm('Wirklich löschen?');">
+          <a class="button event-details__button" href="{{ url_for('event.update', event_id=item.Event.id) }}">Erinnerung bearbeiten</a>
+          <form method="POST" action="{{ url_for('event.delete', event_id=item.Event.id) }}" onsubmit="return confirm('Wirklich löschen?');">
             <button class="button">Löschen</button>
           </form>
 
