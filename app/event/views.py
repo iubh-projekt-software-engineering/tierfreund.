@@ -77,7 +77,11 @@ def update(event_id):
 
     if request.method == 'POST':
         try:
-            event_or_none.time = datetime.strptime(request.form.get('date'), '%Y-%m-%d')
+            time = request.form.get('time')
+            time_old = time.replace('T', ' ')
+            time_new = datetime.strptime(time_old, '%Y-%m-%d %H:%M')
+
+            event_or_none.time = time_new
             event_or_none.topic = request.form.get('topic')
             event_or_none.notes = request.form.get('notes')
             event_or_none.doc_id = request.form.get('doc_id')
