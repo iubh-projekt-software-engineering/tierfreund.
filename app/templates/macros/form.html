@@ -23,6 +23,12 @@
   </div>
 {% endmacro %}
 
+{% macro datetime(name, placeholder, required=False, value=None) %}
+  <div class="form-field">
+    <input {% if value %}value="{{ value }}"{% endif %} {% if required %}required{% endif %} name="{{ name }}" type="datetime-local" placeholder="{{ placeholder }}{% if required %}*{% endif %}" />
+  </div>
+{% endmacro %}
+
 {% macro textarea(name, placeholder, required=False, value=None) %}
   <div class="form-field">
     <textarea {% if required %}required{% endif %} name="{{ name }}" type="date" placeholder="{{ placeholder }}{% if required %}*{% endif %}">{% if value %}{{ value }}{% endif %}</textarea>
