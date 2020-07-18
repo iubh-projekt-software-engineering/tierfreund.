@@ -1,12 +1,12 @@
 {% extends 'dashboard_base.html' %}
-{% from 'macros/form.html' import text, date, submit, cancel , textarea, select%}
+{% from 'macros/form.html' import text, submit, cancel , textarea, select, datetime %}
 
 {% block main %}
 
     <form class="form-box" method="POST" action="{{ url_for('event.create') }}">
         <div class="inside">
 
-            {{ date('date', 'Datum eingeben', required=True) }}
+            {{ datetime('time', 'Zeit eingeben', required=True) }}
             {{ text('topic', 'Termingrund eingeben', required=True) }}
             {{ select('animal_id', animals) }}
             {{ select('doc_id', docs) }}
