@@ -108,6 +108,14 @@ def update(event_id):
         for doc
         in db.session.query(Doc).filter_by(user_id=current_user.id).all()
     ]
+
+    # convert time back
+    time = event_or_none.time
+    time_old = datetime.strftime(time, '%Y-%m-%d %H:%M')
+    time_new = time_old.replace(' ', 'T')
+    
+    event_or_none.time = time_new
+
     return render_template(
         '/events/update.html',
         item=event_or_none,
