@@ -5,6 +5,7 @@ if __name__ == '__main__':
     from app import db
     from app.user.models import User
     from app.animal.model import Animal
+    from app.doc.model import Doc
 
     new_user = User(
         username='demo',
@@ -93,10 +94,37 @@ if __name__ == '__main__':
         'notes': 'Bekommt 3 mal täglich Aspirin Complex. Das hilt immer.'
     })
 
+    docs = ({
+        'name': 'Dr. Langer',
+        'street': 'Teststraße',
+        'zip': '51427',
+        'city': 'Refrath',
+        'phonenumber': '01234565',
+        'email': 'langer-vet@docmail.de',
+        'user_id': new_user.id
+    }, {
+        'name': 'Dr. Vogel',
+        'street': 'Teststraße2',
+        'zip': '51503',
+        'city': 'Rösrath',
+        'phonenumber': '012345657',
+        'email': 'vogel-vet@docmail.de',
+        'user_id': new_user.id
+    })
+
     for animal in animals:
         try:
             new_animal = Animal(**animal)
             db.session.add(new_animal)
+            db.session.commit()
+        except Exception as e:
+            print(e)
+            pass
+
+    for doc in docs:
+        try:
+            new_doc = Doc(**doc)
+            db.session.add(new_doc)
             db.session.commit()
         except Exception as e:
             print(e)
