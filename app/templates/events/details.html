@@ -4,7 +4,6 @@
 {% block main %}
 
   <div class="event-details">
-
     <div class="event-details__inside">
 
         <div class="event-details__stage">
@@ -14,8 +13,7 @@
         <div class="event-details__content">
 
           <div class="event-details__upcoming">
-            <p class="event-details__name">{{ event_item.titel }}</p>
-            <p class="event-details__event__text">Anstehende Termine</p>
+            <p class="event-details__name">{{ item.titel }}</p>
           </div>
 
           {% if item.time %}
@@ -33,8 +31,8 @@
           {% endif %}
 
 
-          <a class="button event-details__button" href="{{ url_for('event.update', event_id=event.id) }}">Erinnerung bearbeiten</a>
-          <form method="POST" action="{{ url_for('event.delete', event_id=event.id) }}" onsubmit="return confirm('Wirklich löschen?');">
+          <a class="button event-details__button" href="{{ url_for('event.update', event_id=item.id) }}">Erinnerung bearbeiten</a>
+          <form method="POST" action="{{ url_for('event.delete', event_id=item.id) }}" onsubmit="return confirm('Wirklich löschen?');">
             <button class="button">Löschen</button>
           </form>
 
