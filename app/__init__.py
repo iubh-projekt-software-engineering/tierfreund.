@@ -36,3 +36,6 @@ app.register_blueprint(mod_docs)
 
 from app.event.views import mod as mod_events
 app.register_blueprint(mod_events)
+
+from app.register.views import mod as mod_register
+app.register_blueprint(mod_register)
