@@ -10,7 +10,7 @@
                 <div class="data-overlay" style="background-color: {{ color }}"></div>
                 <div class="data-content">
                     {% if type %}
-                        <p style="color: {{color}}" class="type">{% if type == 1 %}Hund{% elif type == 2 %}Katze{% endif %}</p>
+                        <p style="color: {{color}}" class="type">{% if type == 1 %}Hund{% elif type == 2 %}Katze{% elif type == 3 %}Fisch{% elif type == 4 %}Maus{% elif type == 5 %}Vogel{% else %}Sonstige{% endif %}</p>
                     {% endif %}
                     <p style="color: {{color}}" class="name">{{ name }}</p>
                     {% if race %}
