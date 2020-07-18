@@ -157,9 +157,9 @@ eval("module.exports = function (module) {\n  if (!module.webpackPolyfill) {\n  
   !*** ./theme/index.scss ***!
   \**************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\\nSassError: media query expression must begin with '('\\n        on line 75 of C:\\\\Users\\\\Daniel\\\\Desktop\\\\Programmierung\\\\python\\\\projects\\\\GitHub\\\\tierfreund\\\\theme\\\\index.scss\\n>> @import 'common.blocks/event-details/__stage-image/event-details__stage-imag\\n   ^\\n\");\n\n//# sourceURL=webpack:///./theme/index.scss?");
+eval("module.exports = __webpack_require__.p + \"bundle.css\";\n\n//# sourceURL=webpack:///./theme/index.scss?");
 
 /***/ }),
 
