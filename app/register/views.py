@@ -22,7 +22,7 @@ def index():
         try:
             new_user = User(
                 username=request.form.get('username'),
-                email=reqiest.form.get('email')
+                email=request.form.get('email')
             )
             new_user.hash_password(request.form.get('password'))
             db.session.add(new_user)
