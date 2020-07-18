@@ -955,6 +955,11 @@ input, select {
   font-weight: 700;
   font-style: normal; }
 
+.event-details__stage {
+  position: relative;
+  height: 280px;
+  background-color: #fdbb45; }
+
 .event-details__stage-image {
   position: absolute;
   bottom: 0;
