@@ -469,6 +469,34 @@ input[type="submit"] {
     font-weight: 700;
     font-style: normal; } }
 
+.form-field {
+  position: relative;
+  margin-bottom: 20px; }
+
+select {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #323434;
+  border-radius: 11px;
+  width: 100%;
+  heigth: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  padding-left: 20px;
+  padding-right: 20px; }
+  select::-moz-placeholder {
+    opacity: 1;
+    color: #323434; }
+  select:-ms-input-placeholder {
+    opacity: 1;
+    color: #323434; }
+  select::-ms-input-placeholder {
+    opacity: 1;
+    color: #323434; }
+  select::placeholder {
+    opacity: 1;
+    color: #323434; }
+
 .animal-listing-item .inner-item {
   border-radius: 20px;
   overflow: hidden;

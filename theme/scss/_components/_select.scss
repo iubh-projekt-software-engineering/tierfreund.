@@ -1,0 +1,22 @@
+.form-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+select {
+  border-width: 1px;
+  border-style: solid;
+  border-color: $black;
+  border-radius: 11px;
+  width: 100%;
+  heigth: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &::placeholder {
+    opacity: 1;
+    color: $black;
+  }
+}
