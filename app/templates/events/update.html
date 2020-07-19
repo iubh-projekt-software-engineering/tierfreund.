@@ -8,8 +8,8 @@
 
             {{ datetime('time', 'Zeit eingeben', required=True, value=item.time) }}
             {{ text('topic', 'Termingrund eingeben', required=True, value=item.topic) }}
-            {{ select('animal_id', animals, value=item.animal_id) }}
-            {{ select('doc_id', docs, value=item.doc_id) }}
+            {{ select('animal_id', animals, value=item.animal_id, required=True) }}
+            {{ select('doc_id', docs, value=item.doc_id, required=True) }}
             {{ textarea('notes', 'Beschreibung eingeben', value=item.notes) }}
             {{ submit('Termin speichern.') }}
             {{ cancel('Abbrechen.') }}

@@ -7,7 +7,7 @@
         <div class="inside">
 
             {{ text('name', 'Namen eingeben', required=True, value=item.name) }}
-            {{ select('type', types) }}
+            {{ select('type', types, required=True, value=item.type) }}
             {{ text('race', 'Rasse eingeben', value=item.race) }}
             {{ float('weight', 'Gewicht eingeben', value=item.weight) }}
             {{ date('birthdate', value=item.birthdate) }}
