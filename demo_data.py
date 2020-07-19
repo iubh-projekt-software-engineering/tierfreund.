@@ -138,33 +138,33 @@ if __name__ == '__main__':
     events = ({
         'time': time_new,
         'topic': 'Impfung',
-        'animal_id': new_animal.id,
-        'doc_id': new_doc.id
+        'animal_id': Animal.id,
+        'doc_id': Doc.id
     }, {
         'time': time_new,
         'topic': 'Vorsorge',
-        'animal_id': new_animal.id,
-        'doc_id': new_doc.id
+        'animal_id': Animal.id,
+        'doc_id': Doc.id
     }, {
         'time': time_new,
         'topic': 'Operation',
-        'animal_id': new_animal.id,
-        'doc_id': new_doc.id
+        'animal_id': Animal.id,
+        'doc_id': Doc.id
     },{
         'time': time_new,
         'topic': 'Impfung',
-        'animal_id': new_animal.id,
-        'doc_id': new_doc.id
+        'animal_id': Animal.id,
+        'doc_id': Doc.id
     },{
         'time': time_new,
         'topic': 'Vorsorge',
-        'animal_id': new_animal.id,
-        'doc_id': new_doc.id
+        'animal_id': Animal.id,
+        'doc_id': Doc.id
     },{
         'time': time_new,
         'topic': 'Operation',
-        'animal_id': new_animal.id,
-        'doc_id': new_doc.id
+        'animal_id': Animal.id,
+        'doc_id': Doc.id
     },)
 
     for event in events:
