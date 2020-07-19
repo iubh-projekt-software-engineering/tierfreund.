@@ -1,6 +1,7 @@
 {% extends 'dashboard_base.html' %}
 {% from 'macros/animal.html' import animal_item %}
 {% from 'macros/event.html' import event_item_short %}
+{% from 'macros/doc.html' import doc_item %}
 
 {% block main %}
 
@@ -25,6 +26,30 @@
 
         </div>
     </div>
+    {% endif %}
+
+    {% if docs %}
+      <div class="doclisting">
+        <div class="doclisting__inside">
+
+          <p class="doc-listing__title">Deine Tierärzte.</p>
+          <p class="doc-listing__subtitle">Immer zur Hand. Für alle Fälle.</p>
+
+          <div class="doc-listing__items">
+            {% for item in docs %}
+              {{ doc_item(
+                id=item.id,
+                name=item.name,
+                street=item.street,
+                plz=item.plz,
+                city=item.city,
+                phonenumber=item.phonenumber,
+                email=item.email
+              ) }}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
     {% endif %}
 
     {% if upcoming_events %}
