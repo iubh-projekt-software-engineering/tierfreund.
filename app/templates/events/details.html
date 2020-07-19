@@ -18,7 +18,7 @@
           </div>
 
           <div class="event-details__date-content">
-            <div class="event-details__date"> {{ item.Event.time }}</div>
+            <div class="event-details__date"> {{ item.Event.time.strftime('%d.%m.%Y %H:%M Uhr') }}</div>
             <div class="event-details__topic">{{ item.Event.topic }}</div>
           </div>
 
