@@ -76,6 +76,7 @@ def update(doc_id):
 
     return render_template('/docs/update.html', item=doc_or_none)
 
+
 @mod.route('/details/<int:doc_id>')
 def details(doc_id):
     doc_or_none = db.session.query(Doc).filter_by(
