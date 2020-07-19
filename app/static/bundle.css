@@ -923,11 +923,9 @@ input, select {
   margin-bottom: 20px; }
 
 .event-details__content {
-  padding: 40px;
-  background-color: rgba(253, 187, 69, 0.2); }
+  padding: 40px; }
 
 .event-details__date {
-  color: #fdbb45;
   font-size: 21px;
   margin-bottom: 10px;
   font-family: sofia-pro, sans-serif;
@@ -935,7 +933,6 @@ input, select {
   font-style: normal; }
 
 .event-details__name {
-  color: #fdbb45;
   font-size: 24px;
   margin-bottom: 4px;
   font-family: sofia-pro, sans-serif;
@@ -944,17 +941,14 @@ input, select {
 
 .event-details__event__text {
   font-size: 18px;
-  color: #fdbb45;
   margin-bottom: 30px; }
 
 .event-details__notes {
   font-size: 18px;
-  color: #fdbb45;
   margin-bottom: 60px; }
 
 .event-details__notes__text {
   font-size: 24px;
-  color: #fdbb45;
   margin-bottom: 10px;
   font-family: sofia-pro, sans-serif;
   font-weight: 700;
@@ -972,7 +966,6 @@ input, select {
 
 .event-details__topic {
   font-size: 18px;
-  color: #fdbb45;
   margin-bottom: 40px; }
 
 .event-item-short__content {
