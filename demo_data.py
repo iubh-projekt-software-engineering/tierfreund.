@@ -6,6 +6,8 @@ if __name__ == '__main__':
     from app.user.models import User
     from app.animal.model import Animal
     from app.doc.model import Doc
+    from app.event.model import Event
+    from datetime import datetime
 
     new_user = User(
         username='demo',
@@ -125,6 +127,50 @@ if __name__ == '__main__':
         try:
             new_doc = Doc(**doc)
             db.session.add(new_doc)
+            db.session.commit()
+        except Exception as e:
+            print(e)
+            pass
+
+    time = str(datetime.now().strftime("%Y-%m-%d %H:%M"))
+    time_new = datetime.strptime(time, '%Y-%m-%d %H:%M')
+
+    events = ({
+        'time': time_new,
+        'topic': 'Impfung',
+        'animal_id': Animal.id,
+        'doc_id': Doc.id
+    }, {
+        'time': time_new,
+        'topic': 'Vorsorge',
+        'animal_id': Animal.id,
+        'doc_id': Doc.id
+    }, {
+        'time': time_new,
+        'topic': 'Operation',
+        'animal_id': Animal.id,
+        'doc_id': Doc.id
+    },{
+        'time': time_new,
+        'topic': 'Impfung',
+        'animal_id': Animal.id,
+        'doc_id': Doc.id
+    },{
+        'time': time_new,
+        'topic': 'Vorsorge',
+        'animal_id': Animal.id,
+        'doc_id': Doc.id
+    },{
+        'time': time_new,
+        'topic': 'Operation',
+        'animal_id': Animal.id,
+        'doc_id': Doc.id
+    },)
+
+    for event in events:
+        try:
+            new_event = Event(**event)
+            db.session.add(new_event)
             db.session.commit()
         except Exception as e:
             print(e)
