@@ -17,11 +17,19 @@ mod = Blueprint('event', __name__, url_prefix='/termine')
 
 @mod.route('/')
 def index():
-    events = db.session.query(Event).join(Animal).filter(Animal.user_id==current_user.id).all()
+    upcoming_events = db.session.query(Event,Animal,Doc).join(Doc).join(Animal).filter(
+        Animal.user_id == current_user.id,
+        Event.time >= datetime.now()
+    ).all()
+    past_events = db.session.query(Event,Animal,Doc).join(Doc).join(Animal).filter(
+        Animal.user_id == current_user.id,
+        Event.time < datetime.now()
+    ).all()
     create_url = url_for('event.create')
     return render_template(
         '/events/index.html',
-        events=events,
+        upcoming_events=upcoming_events,
+        past_events=past_events,
         create_url=create_url
     )
 
