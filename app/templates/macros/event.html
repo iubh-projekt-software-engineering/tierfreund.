@@ -4,7 +4,7 @@
             <div style="background-color: {{ color }}" class="event-item-short__overlay"></div>
             <div class="event-item-short__content">
                 <p style="color: {{ color }}" class="event-item-short__dog-name">{{ dog_name }}</p>
-                <p style="color: {{ color }}" class="event-item-short__time">{{ time }}</p>
+                <p style="color: {{ color }}" class="event-item-short__time">{{ time.strftime('%d.%m.%Y %H:%M Uhr') }}</p>
                 <p style="color: {{ color }}" class="event-item-short__topic">{{ topic }}</p>
             </div>
         </a>

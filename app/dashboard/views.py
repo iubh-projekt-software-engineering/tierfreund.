@@ -17,5 +17,15 @@ mod = Blueprint('dashboard', __name__, url_prefix='/dashboard')
 @login_required
 def index():
     animals = db.session.query(Animal).filter_by(user_id=current_user.id).all()
-    events = db.session.query(Event).filter_by(animal_id=Animal.id, doc_id=Doc.id).all()
-    return render_template('dashboard/index.html', animals=animals, events=events)
+    events = db.session.query(
+        Event,
+        Animal,
+        Doc
+    ).join(Animal).join(Doc).filter(
+        Animal.user_id == current_user.id
+    ).all()
+    return render_template(
+        'dashboard/index.html',
+        animals=animals,
+        upcoming_events=events
+    )
