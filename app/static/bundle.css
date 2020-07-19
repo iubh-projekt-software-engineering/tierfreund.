@@ -801,6 +801,14 @@ input, select {
 .doc-listing__doc-item {
   margin-bottom: 20px; }
 
+@media screen and (min-width: 1200px) {
+  .doc-listing__items {
+    display: flex;
+    flex-wrap: wrap; }
+  .doc-listing__items .doc-item {
+    width: 50%;
+    border: 20px solid transparent; } }
+
 .doc-listing__title {
   font-size: 24px;
   font-family: sofia-pro, sans-serif;
