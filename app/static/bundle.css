@@ -574,6 +574,34 @@ input, select {
   .flying-button:before {
     transform: translate(-50%, -50%) rotate(90deg); }
 
+.imprint {
+  background-color: white;
+  padding-left: 40px;
+  width: 90%; }
+
+.imprint-section__titel {
+  font-size: 21px;
+  margin-bottom: 10px;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal; }
+
+.imprint-section__text {
+  margin-bottom: 10px; }
+
+.imprint-section__settlement-titel {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal; }
+
+.imprint-section__settlement-text {
+  margin-bottom: 10px;
+  font-size: 14px; }
+
+@media screen and (min-width: 1200px) {
+  .imprint__inside {
+    width: 60%; } }
+
 .onboarding--stage {
   position: fixed;
   top: 0;
