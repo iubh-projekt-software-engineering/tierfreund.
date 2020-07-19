@@ -1,0 +1,30 @@
+.imprint {
+  background-color: $white;
+  padding-left: 40px;
+  width: 90%;
+}
+
+.imprint-section__titel {
+  font-size: 21px;
+  margin-bottom: 10px;
+  @include bold;
+}
+
+.imprint-section__text {
+  margin-bottom: 10px;
+}
+
+.imprint-section__settlement-titel {
+  @include bold;
+}
+
+.imprint-section__settlement-text {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+@media screen and (min-width: $desktop) {
+    .imprint__inside {
+        width: 60%;
+    }
+}
