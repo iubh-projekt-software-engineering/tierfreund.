@@ -1,0 +1,39 @@
+{% extends 'dashboard_base.html' %}
+
+{% block main %}
+  <div class="event-detail">
+    <div class="event-detail__inside">
+
+      <div class="event-detail__stage" style="background-color: {{ item.Animal.color }}">
+        <img class="event-detail__stage-image" src="{% if item.Animal.type == 1 %}{{ url_for('static', filename='illustration-hund.svg') }}{% elif item.Animal.type == 2 %}{{ url_for('static', filename='illustration-katze.svg') }}{% elif item.Animal.type == 3 %}{{ url_for('static', filename='illustration-fisch.svg') }}{% elif item.Animal.type == 4 %}{{ url_for('static', filename='illustration-maus.svg') }}{% elif item.Animal.type == 5 %}{{ url_for('static', filename='illustration-vogel.svg') }}{% endif %}" />
+      </div>
+
+      <div class="event-detail__wrapper">
+
+        <div class="event-detail__overlay" style="background-color: {{ item.Animal.color }};"></div>
+
+        <div class="event-detail__content">
+
+          <p class="event-detail__dog-name">{{ item.Animal.name }}</p>
+          <p class="event-detail__time">{{ item.Event.time }}</p>
+          <p class="event-detail__topic">{{ item.Event.topic }} bei {{ item.Doc.name }}</p>
+
+          {% if item.Event.notes %}
+            <div class="event-detail__notes">
+              <p class="event-detail__notes-title">Beschreibung.</p>
+              <p class="event-detail__notes-text">{{ item.Event.notes }}</p>
+            </div>
+          {% endif %}
+
+          <a class="button event-detail__button" href="{{ url_for('event.update', event_id=item.Event.id) }}">Termin bearbeiten</a>
+          <form method="POST" action="{{ url_for('event.delete', event_id=item.Event.id) }}" onsubmit="return confirm('Wirklich löschen');">
+            <button class="button">Löschen</button>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
