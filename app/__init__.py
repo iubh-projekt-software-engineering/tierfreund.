@@ -39,3 +39,6 @@ app.register_blueprint(mod_events)
 
 from app.register.views import mod as mod_register
 app.register_blueprint(mod_register)
+
+from app.privacy.views import mod as mod_privacy
+app.register_blueprint(mod_privacy)
