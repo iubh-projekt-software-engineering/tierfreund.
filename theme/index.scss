@@ -58,16 +58,18 @@
 @import 'common.blocks/doc-details/__iconlist/__text/doc-details__iconlist__text';
 @import 'common.blocks/doc-details/__button/doc-details__button';
 
-@import 'common.blocks/event-details/__button/event-details__button';
-@import 'common.blocks/event-details/__content/event-details__content';
-@import 'common.blocks/event-details/__date/event-details__date';
-@import 'common.blocks/event-details/__name/event-details__name';
-@import 'common.blocks/event-details/__name/__text/event-details__event__text';
-@import 'common.blocks/event-details/__notes/event-details__notes';
-@import 'common.blocks/event-details/__notes/__text/event-details__notes__text';
-@import 'common.blocks/event-details/__stage/event-details__stage';
-@import 'common.blocks/event-details/__stage-image/event-details__stage-image';
-@import 'common.blocks/event-details/__topic/event-details__topic';
+@import 'common.blocks/event-detail/__button/event-detail__button';
+@import 'common.blocks/event-detail/__content/event-detail__content';
+@import 'common.blocks/event-detail/__dog-name/event-detail__dog-name';
+@import 'common.blocks/event-detail/__notes-text/event-detail__notes-text';
+@import 'common.blocks/event-detail/__notes-title/event-detail__notes-title';
+@import 'common.blocks/event-detail/__notes/event-detail__notes';
+@import 'common.blocks/event-detail/__overlay/event-detail__overlay';
+@import 'common.blocks/event-detail/__stage-image/event-detail__stage-image';
+@import 'common.blocks/event-detail/__stage/event-detail__stage';
+@import 'common.blocks/event-detail/__time/event-detail__time';
+@import 'common.blocks/event-detail/__topic/event-detail__topic';
+@import 'common.blocks/event-detail/__wrapper/event-detail__wrapper';
 
 @import 'common.blocks/event-item-short/__content/event-item-short__content';
 @import 'common.blocks/event-item-short/__dog-name/event-item-short__dog-name';
