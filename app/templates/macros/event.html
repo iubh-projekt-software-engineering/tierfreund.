@@ -1,9 +1,12 @@
-{% macro event_item_short(dog_name, time, topic, href) %}
-    <div class="event-item-small">
-        <a class="event-item-small__link-wrapper" href="{{ href }}">
-            <p class="event-item-small__dog-name">{{ dog_name }}</p>
-            <p class="event-item-small__time">{{ time }}</p>
-            <p class="event-item-small__topic">{{ topic }}</p>
+{% macro event_item_short(dog_name, time, topic, href, color) %}
+    <div class="event-item-short">
+        <a class="event-item-short__link-wrapper" href="{{ href }}">
+            <div style="background-color: {{ color }}" class="event-item-short__overlay"></div>
+            <div class="event-item-short__content">
+                <p style="color: {{ color }}" class="event-item-short__dog-name">{{ dog_name }}</p>
+                <p style="color: {{ color }}" class="event-item-short__time">{{ time }}</p>
+                <p style="color: {{ color }}" class="event-item-short__topic">{{ topic }}</p>
+            </div>
         </a>
     </div>
 {% endmacro %}
