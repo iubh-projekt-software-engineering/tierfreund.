@@ -879,6 +879,13 @@ input, select {
 .eventlisting__docitem {
   margin-bottom: 20px; }
 
+.event-listing__text {
+  font-size: 24px;
+  padding: 40px;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal; }
+
 .eventitem {
   text-decoration: none;
   display: block; }
