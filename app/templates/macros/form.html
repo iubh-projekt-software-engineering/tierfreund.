@@ -19,7 +19,7 @@
 
 {% macro date(name, placeholder, required=True, value=None) %}
   <div class="form-field">
-    <input {% if value %}value="{{ value }} "{% endif %} {% if required %}required{% endif %} name="{{ name }}" type="date" placeholder="{{ placeholder }}{% if required %}*{% endif %}" />
+    <input {% if value %}value="{{ value }}"{% endif %} {% if required %}required{% endif %} name="{{ name }}" type="date" placeholder="{{ placeholder }}{% if required %}*{% endif %}" />
   </div>
 {% endmacro %}
 
