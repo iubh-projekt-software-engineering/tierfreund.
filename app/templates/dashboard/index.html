@@ -39,7 +39,7 @@
                 dog_name=item.Animal.name,
                 time=item.Event.time,
                 topic=item.Event.topic,
-                href=url_for('event.details', event_id=item.Event.id),
+                id=item.Event.id,
                 color=item.Animal.color
             ) }}
           {% endfor %}

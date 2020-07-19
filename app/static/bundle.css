@@ -919,54 +919,6 @@ input, select {
 .doc-details__button {
   margin-bottom: 20px; }
 
-.eventlisting {
-  padding: 40px; }
-
-.eventlisting__eventitem {
-  margin-bottom: 20px; }
-
-.event-listing__text {
-  font-size: 24px;
-  padding: 40px;
-  font-family: sofia-pro, sans-serif;
-  font-weight: 700;
-  font-style: normal; }
-
-.eventitem {
-  text-decoration: none;
-  display: block; }
-
-.eventitem__inside {
-  background-color: rgba(253, 187, 69, 0.2);
-  border-radius: 20px;
-  padding: 20px; }
-
-.eventitem__name {
-  font-size: 18px;
-  color: #fdbb45; }
-
-.eventitem__date {
-  font-size: 21px;
-  color: #fdbb45;
-  font-family: sofia-pro, sans-serif;
-  font-weight: 700;
-  font-style: normal; }
-
-.eventitem__notes {
-  font-size: 18px;
-  color: #fdbb45; }
-
-.eventitem__text {
-  font-size: 18px;
-  color: #fdbb45;
-  font-family: sofia-pro, sans-serif;
-  font-weight: 700;
-  font-style: normal; }
-
-.eventitem__topic {
-  font-size: 18px;
-  color: #fdbb45; }
-
 .event-details__button {
   margin-bottom: 20px; }
 
