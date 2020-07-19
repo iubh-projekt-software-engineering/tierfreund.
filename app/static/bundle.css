@@ -976,3 +976,33 @@ input, select {
   font-size: 18px;
   color: #fdbb45;
   margin-bottom: 40px; }
+
+.event-item-short__content {
+  position: relative;
+  z-index: 2;
+  padding: 20px; }
+
+.event-item-short__dog-name {
+  font-size: 18px; }
+
+.event-item-short__link-wrapper {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  border-radius: 20px;
+  overflow: hidden; }
+
+.event-item-short__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.15; }
+
+.event-item-short__time {
+  font-size: 21px;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal; }
