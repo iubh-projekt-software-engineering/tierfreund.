@@ -43,7 +43,7 @@
 
 {% macro cancel(text="Abbrechen") %}
   <div class="form-field">
-    <a href="#" class="button is--outlined">{{ text }}</a>
+    <a onclick="window.history.go(-1);" class="button is--outlined">{{ text }}</a>
   </div>
 {% endmacro %}
 
