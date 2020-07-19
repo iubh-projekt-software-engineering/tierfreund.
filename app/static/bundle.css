@@ -1041,3 +1041,32 @@ input, select {
   text-decoration: none;
   border-radius: 20px;
   overflow: hidden; }
+
+.event-listing {
+  padding-left: 20px;
+  padding-right: 20px; }
+  .event-listing .event-item-large {
+    margin-bottom: 20px; }
+  .event-listing .event-item-short {
+    margin-bottom: 20px; }
+
+.event-listing__title {
+  font-size: 24px;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal; }
+
+.event-listing__subtitle {
+  font-size: 18px;
+  margin-bottom: 40px; }
+
+@media screen and (min-width: 1200px) {
+  .event-listing__items {
+    display: flex;
+    flex-wrap: wrap; }
+    .event-listing__items .event-item-large {
+      width: 50%;
+      padding: 10px; }
+    .event-listing__items .event-item-short {
+      width: 50%;
+      padding: 10px; } }
