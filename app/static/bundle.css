@@ -798,37 +798,47 @@ input, select {
 .doclisting {
   padding: 40px; }
 
-.doclisting__docitem {
+.doc-listing__doc-item {
   margin-bottom: 20px; }
 
-.docitem {
+.doc-listing__title {
+  font-size: 24px;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal; }
+
+.doc-listing__subtitle {
+  font-size: 18px;
+  margin-bottom: 40px; }
+
+.doc-item {
   text-decoration: none;
   display: block; }
 
-.docitem__inside {
+.doc-item__inside {
   background-color: rgba(253, 187, 69, 0.2);
   border-radius: 20px;
   padding: 20px; }
 
-.docitem__city {
+.doc-item__city {
   color: #fdbb45;
   font-size: 18px; }
 
-.docitem__name {
+.doc-item__name {
   font-size: 18px;
   color: #fdbb45;
   font-family: sofia-pro, sans-serif;
   font-weight: 700;
   font-style: normal; }
 
-.docitem__street {
+.doc-item__street {
   font-size: 18px;
   color: #fdbb45; }
 
-.docitem__iconlist {
+.doc-item__iconlist {
   margin-top: 20px; }
 
-.docitem__iconlist__text {
+.doc-item__iconlist__text {
   color: #fdbb45; }
 
 .doc-details__stage {

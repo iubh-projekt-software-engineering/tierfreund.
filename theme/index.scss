@@ -33,16 +33,20 @@
 @import 'common.blocks/iconlist/__icon/iconlist__icon';
 @import 'common.blocks/iconlist/__text/iconlist__text';
 
-@import 'common.blocks/doclisting/doclisting';
-@import 'common.blocks/doclisting/__docitem/doclisting__docitem';
+@import 'common.blocks/doc-listing/doc-listing';
+@import 'common.blocks/doc-listing/__doc-item/doc-listing__doc-item';
+@import 'common.blocks/doc-listing/__title/doc-listing__title';
+@import 'common.blocks/doc-listing/__subtitle/doc-listing__subtitle';
 
-@import 'common.blocks/docitem/docitem';
-@import 'common.blocks/docitem/__inside/docitem__inside';
-@import 'common.blocks/docitem/__city/docitem__city';
-@import 'common.blocks/docitem/__name/docitem__name';
-@import 'common.blocks/docitem/__street/docitem__street';
-@import 'common.blocks/docitem/__iconlist/docitem__iconlist';
-@import 'common.blocks/docitem/__iconlist/__text/docitem__iconlist__text';
+
+
+@import 'common.blocks/doc-item/doc-item';
+@import 'common.blocks/doc-item/__inside/doc-item__inside';
+@import 'common.blocks/doc-item/__city/doc-item__city';
+@import 'common.blocks/doc-item/__name/doc-item__name';
+@import 'common.blocks/doc-item/__street/doc-item__street';
+@import 'common.blocks/doc-item/__iconlist/doc-item__iconlist';
+@import 'common.blocks/doc-item/__iconlist/__text/doc-item__iconlist__text';
 
 @import 'common.blocks/doc-details/__stage/doc-details__stage';
 @import 'common.blocks/doc-details/__stage-image/doc-details__stage-image';
