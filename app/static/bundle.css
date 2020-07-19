@@ -574,10 +574,22 @@ input, select {
   .flying-button:before {
     transform: translate(-50%, -50%) rotate(90deg); }
 
+.privacy {
+  background-color: white;
+  padding-left: 40px;
+  width: 90%; }
+
 .imprint {
   background-color: white;
   padding-left: 40px;
   width: 90%; }
+
+.privacy-section__titel {
+  font-size: 21px;
+  margin-bottom: 10px;
+  font-family: sofia-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 
 .imprint-section__titel {
   font-size: 21px;
@@ -586,6 +598,14 @@ input, select {
   font-weight: 700;
   font-style: normal; }
 
+.privacy-section__text {
+  font-size: 16px;
+  margin-bottom: 10px; }
+
+.privacy-section__privacy-titel {
+  font-size: 21px;
+  margin-bottom: 10px;
+
 .imprint-section__text {
   margin-bottom: 10px; }
 
@@ -593,6 +613,18 @@ input, select {
   font-family: sofia-pro, sans-serif;
   font-weight: 700;
   font-style: normal; }
+
+.privacy-section__privacy-text {
+  font-size: 14px;
+  margin-bottom: 10px; }
+
+.privacy__text-indented {
+  margin-left: 20px;
+  margin-bottom: 10px; }
+
+@media screen and (min-width: 1200px) {
+  .privacy__inside {
+    width: 60%; } }
 
 .imprint-section__settlement-text {
   margin-bottom: 10px;

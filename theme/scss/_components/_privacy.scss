@@ -1,0 +1,37 @@
+.privacy {
+  background-color: $white;
+  padding-left: 40px;
+  width: 90%;
+}
+.privacy-section__titel {
+  font-size: 21px;
+  margin-bottom: 10px;
+  @include bold;
+}
+
+.privacy-section__text{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.privacy-section__privacy-titel {
+  font-size: 21px;
+  margin-bottom: 10px;
+  @include bold;
+}
+
+.privacy-section__privacy-text {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.privacy__text-indented {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: $desktop) {
+    .privacy__inside {
+        width: 60%;
+    }
+}
