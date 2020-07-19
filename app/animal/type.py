@@ -24,8 +24,6 @@ class Animal:
         'id': 5
     }
 
-
-
     @staticmethod
     def get_types():
         return (
@@ -36,11 +34,13 @@ class Animal:
             Animal.bird
         )
 
+
 animal_labels = {
     item['id']: item['label']
-    for item 
+    for item
     in Animal.get_types()
 }
+
 
 class Gender:
     @staticmethod

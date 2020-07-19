@@ -5,7 +5,6 @@ from flask import (
     render_template,
     request,
     url_for,
-    session,
     redirect,
     flash
 )
@@ -23,15 +22,14 @@ def index():
             email=request.form.get('email')
         ).one_or_none()
 
-        if user_or_none is None or not user_or_none.verify_password(request.form.get('password')):
+        if user_or_none is None or not user_or_none.verify_password(
+                                                    request.form.get(
+                                                                 'password')):
             flash('Nutzer konnte nicht verifiziert werden.')
             return redirect(url_for('login.index'))
-        
-        
 
         login_user(user_or_none)
 
         return redirect(url_for('dashboard.index'))
-
 
     return render_template('/login/index.html')

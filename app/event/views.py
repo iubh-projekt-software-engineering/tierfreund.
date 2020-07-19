@@ -15,13 +15,18 @@ from app.doc.model import Doc
 
 mod = Blueprint('event', __name__, url_prefix='/termine')
 
+
 @mod.route('/')
 def index():
-    upcoming_events = db.session.query(Event,Animal,Doc).join(Doc).join(Animal).filter(
+    upcoming_events = db.session.query(Event,
+                                       Animal,
+                                       Doc).join(Doc).join(Animal).filter(
         Animal.user_id == current_user.id,
         Event.time >= datetime.now()
     ).all()
-    past_events = db.session.query(Event,Animal,Doc).join(Doc).join(Animal).filter(
+    past_events = db.session.query(Event,
+                                   Animal,
+                                   Doc).join(Doc).join(Animal).filter(
         Animal.user_id == current_user.id,
         Event.time < datetime.now()
     ).all()
@@ -32,6 +37,7 @@ def index():
         past_events=past_events,
         create_url=create_url
     )
+
 
 @mod.route('/erstellen', methods=['GET', 'POST'])
 def create():
@@ -73,10 +79,11 @@ def create():
     ]
     return render_template('/events/create.html', animals=animals, docs=docs)
 
+
 @mod.route('/bearbeiten/<int:event_id>', methods=['GET', 'POST'])
 def update(event_id):
     event_or_none = db.session.query(Event).join(Animal).filter(
-        Event.id ==event_id, Animal.user_id == current_user.id
+        Event.id == event_id, Animal.user_id == current_user.id
     ).one_or_none()
 
     if event_or_none is None:
@@ -95,7 +102,7 @@ def update(event_id):
             event_or_none.doc_id = request.form.get('doc_id')
             event_or_none.animal_id = request.form.get('animal_id')
             db.session.commit()
-        except Exception as e:
+        except Exception:
             flash('Das Event konnte leider nicht bearbeitet werden.')
             return redirect(url_for('event.update', event_id=event_id))
 
@@ -121,7 +128,7 @@ def update(event_id):
     time = event_or_none.time
     time_old = datetime.strftime(time, '%Y-%m-%d %H:%M')
     time_new = time_old.replace(' ', 'T')
-    
+
     event_or_none.time = time_new
 
     return render_template(
@@ -131,10 +138,13 @@ def update(event_id):
         docs=docs
     )
 
+
 @mod.route('/details/<int:event_id>')
 def details(event_id):
-    event_or_none = db.session.query(Event, Animal, Doc).join(Animal).join(Doc).filter(
-        Event.id==event_id, Animal.user_id==current_user.id
+    event_or_none = db.session.query(Event,
+                                     Animal,
+                                     Doc).join(Animal).join(Doc).filter(
+        Event.id == event_id, Animal.user_id == current_user.id
     ).one_or_none()
 
     if event_or_none is None:

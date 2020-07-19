@@ -50,7 +50,7 @@ def create():
 
         return redirect(url_for('animal.index'))
 
-    types = [ {
+    types = [{
         'value': animal['id'],
         'label': animal['label']
     } for animal in AnimalTypes.get_types()]
@@ -82,17 +82,20 @@ def update(animal_id):
             print(e)
             return redirect(url_for('animal.update', animal_id=animal_id))
 
-
         return redirect(url_for('animal.details', animal_id=animal_id))
 
-    types = [ {
+    types = [{
         'value': animal['id'],
         'label': animal['label']
     } for animal in AnimalTypes.get_types()]
     colors = ('#6067EE', '#20AB62', '#F77161', '#FE9055', '#FDBB45')
     date = animal_or_none.birthdate.split('.')
     animal_or_none.birthdate = '{}-{}-{}'.format(date[2], date[1], date[0])
-    return render_template('/animals/update.html', colors=colors, types=types, item=animal_or_none)
+    return render_template('/animals/update.html',
+                           colors=colors,
+                           types=types,
+                           item=animal_or_none)
+
 
 @mod.route('/details/<int:animal_id>')
 def details(animal_id):
