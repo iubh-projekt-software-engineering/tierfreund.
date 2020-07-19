@@ -12,5 +12,5 @@ class Doc(db.Model):
     city = db.Column(db.String(100))
     phonenumber = db.Column(db.String(100))
     email = db.Column(db.String(100))
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     user = db.relationship(User, foreign_keys=[user_id])
