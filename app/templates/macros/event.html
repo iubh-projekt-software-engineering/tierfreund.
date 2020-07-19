@@ -1,15 +1,9 @@
-{% macro event_item(id, titel, time, topic, notes) %}
-    <div class="event-listing-item">
-        <a href="{{ url_for('event.details', event_id=id)}}" class="inner-item">
-
-            <div class="data">
-
-                <div class="data-content">
-                    {% if titel %}
-                        <p class="data-content__titel">{{ event_item.titel }}</p>
-                    {% endif %}
-                </div>
-            </div>
+{% macro event_item_short(dog_name, time, topic, href) %}
+    <div class="event-item-small">
+        <a class="event-item-small__link-wrapper" href="{{ href }}">
+            <p class="event-item-small__dog-name">{{ dog_name }}</p>
+            <p class="event-item-small__time">{{ time }}</p>
+            <p class="event-item-small__topic">{{ topic }}</p>
         </a>
     </div>
 {% endmacro %}

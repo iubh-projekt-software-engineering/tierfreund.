@@ -964,8 +964,7 @@ input, select {
 
 .event-details__stage {
   position: relative;
-  height: 280px;
-  background-color: #fdbb45; }
+  height: 280px; }
 
 .event-details__stage-image {
   position: absolute;
