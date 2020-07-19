@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- encoding: utf-8 -*-
+from datetime import datetime
 from flask import (
     Blueprint,
     render_template
@@ -22,7 +23,8 @@ def index():
         Animal,
         Doc
     ).join(Animal).join(Doc).filter(
-        Animal.user_id == current_user.id
+        Animal.user_id == current_user.id,
+        Event.time >= datetime.now()
     ).all()
     return render_template(
         'dashboard/index.html',
