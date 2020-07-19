@@ -1,0 +1,11 @@
+@media screen and (min-width: $desktop) {
+    .doc-listing__items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .doc-listing__items .doc-item {
+        width: 50%;
+        border: 20px solid transparent;
+    }
+}

@@ -1,44 +1,27 @@
 {% extends 'dashboard_base.html' %}
-{% from 'macros/icon.html' import icon %}
+{% from 'macros/doc.html' import doc_item %}
 
 {% block main %}
 
     <div class="doclisting">
         <div class="doclisting__inside">
 
-            {% for item in docs %}
-                <a href="{{ url_for('doc.details', doc_id=item.id) }}" class="docitem doclisting__docitem">
-                    <div class="docitem__inside">
-                        {% if item.name %}
-                            <p class="docitem__name">{{ item.name }}</p>
-                        {% endif %}
-                        {% if item.street %}
-                            <p class="docitem__street">{{ item.street }}</p>
-                        {% endif %}
-                        {% if item.plz or item.city %}
-                            <p class="docitem__city">{% if item.plz %}%{{ item.plz }} {% endif %}{% if item.city%}{{ item.city }}{% endif %}</p>
-                        {% endif %}
+            <p class="doc-listing__title">Deine Tierärzte.</p>
+            <p class="doc-listing__subtitle">Immer zur Hand. Für alle Fälle.</p>
 
-                        <div class="iconlist docitem__iconlist">
-                            {% if item.phonenumber %}
-                                <div class="iconlist__row">
-                                    <div class="iconlist__icon">{{ icon(name='phone-yellow.svg') }}</div>
-                                    <div class="iconlist__text docitem__iconlist__text">{{ item.phonenumber }}</div>
-                                </div>
-                            {% endif %}
-
-                            {% if item.email %}
-                                <div class="iconlist__row">
-                                    <div class="iconlist__icon">{{ icon(name='mail-yellow.svg') }}</div>
-                                    <div class="iconlist__text docitem__iconlist__text">{{ item.email }}</div>
-                                </div>
-                            {% endif %}
-                        </div>
-
-                    </div>
-                </a>
-            {% endfor %}
-
+            <div class="doc-listing__items">
+                {% for item in docs %}
+                    {{ doc_item(
+                        id=item.id,
+                        name=item.name,
+                        street=item.street,
+                        plz=item.plz,
+                        city=item.city,
+                        phonenumber=item.phonenumber,
+                        email=item.email
+                    ) }}
+                {% endfor %}
+            </div>
         </div>
     </div>
 

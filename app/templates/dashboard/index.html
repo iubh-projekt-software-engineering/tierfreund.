@@ -1,6 +1,7 @@
 {% extends 'dashboard_base.html' %}
 {% from 'macros/animal.html' import animal_item %}
 {% from 'macros/event.html' import event_item_short %}
+{% from 'macros/doc.html' import doc_item %}
 
 {% block main %}
 
@@ -27,11 +28,36 @@
     </div>
     {% endif %}
 
+    {% if docs %}
+      <div class="doclisting">
+        <div class="doclisting__inside">
+
+          <p class="doc-listing__title">Deine Tierärzte.</p>
+          <p class="doc-listing__subtitle">Immer zur Hand. Für alle Fälle.</p>
+
+          <div class="doc-listing__items">
+            {% for item in docs %}
+              {{ doc_item(
+                id=item.id,
+                name=item.name,
+                street=item.street,
+                plz=item.plz,
+                city=item.city,
+                phonenumber=item.phonenumber,
+                email=item.email
+              ) }}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
     {% if upcoming_events %}
     <div class="event-listing">
       <div class="event-listing__inside">
 
-        <h3 class="event-listing__text">Deine anstehenden Termine.</h3>
+        <h3 class="event-listing__title">Deine anstehenden Termine.</h3>
+        <p class="event-listing__subtitle">Immer alles auf einen Blick.</p>
 
         <div class="event-listing__items">
           {% for item in upcoming_events %}
@@ -39,7 +65,7 @@
                 dog_name=item.Animal.name,
                 time=item.Event.time,
                 topic=item.Event.topic,
-                href=url_for('event.details', event_id=item.Event.id),
+                id=item.Event.id,
                 color=item.Animal.color
             ) }}
           {% endfor %}

@@ -1,0 +1,32 @@
+{% from 'macros/icon.html' import icon %}
+
+{% macro doc_item(id, name, street, plz, city, phonenumber, email) %}
+    <a href="{{ url_for('doc.details', doc_id=id) }}" class="doc-item doc-listing__doc-item">
+        <div class="doc-item__inside">
+            <p class="doc-item__name">{{ name }}</p>
+            {% if street %}
+                <p class="doc-item__street">{{ street }}</p>
+            {% endif %}
+            {% if plz or city %}
+                <p class="doc-item__city">{% if plz %}%{{ plz }} {% endif %}{% if city %}{{ city }}{% endif %}</p>
+            {% endif %}
+
+            <div class="iconlist doc-item__iconlist">
+                {% if phonenumber %}
+                    <div class="iconlist__row">
+                        <div class="iconlist__icon">{{ icon(name='phone-yellow.svg') }}</div>
+                        <div class="iconlist__text doc-item__iconlist__text">{{ phonenumber }}</div>
+                    </div>
+                {% endif %}
+
+                {% if email %}
+                    <div class="iconlist__row">
+                        <div class="iconlist__icon">{{ icon(name='mail-yellow.svg') }}</div>
+                        <div class="iconlist__text doc-item__iconlist__text">{{ email }}</div>
+                    </div>
+                {% endif %}
+            </div>
+
+        </div>
+    </a>
+{% endmacro %}

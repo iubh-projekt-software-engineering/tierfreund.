@@ -1,29 +1,42 @@
 {% extends 'dashboard_base.html' %}
-{% from 'macros/icon.html' import icon %}
+{% from 'macros/event.html' import event_item_short, event_item_large %}
 
 {% block main %}
 
-    <div class="eventlisting">
-        <div class="eventlisting__inside">
+    <div class="event-listing">
+        <div class="event-listing__inside">
 
-            {% for item in events %}
-                <a href="{{ url_for('event.details', event_id=item.id) }}" class="eventitem eventlisting__eventitem">
-                    <div class="eventitem__inside">
-                        {% if item.titel %}
-                            <p class="eventitem__name">{{ item.titel }}</p>
-                        {% endif %}
-                        {% if item.time %}
-                            <p class="eventitem__date">{{ item.time }}</p>
-                            <p class="eventitem__topic">{{ item.topic }}</p>
-                        {% endif %}
-                        {% if item.notes %}
-                            <p class="eventitem__text">Beschreibung:</p>
-                            <p class="eventitem__notes">{{ item.notes }}</p>
-                        {% endif %}
+            <p class="event-listing__title">Deine anstehenden Termine.</p>
+            <p class="event-listing__subtitle">Immer alles im Blick.</p>
 
-                    </div>
-                </a>
-            {% endfor %}
+            <div class="event-listing__items">
+                {% for item in upcoming_events %}
+                    {{ event_item_large(
+                        dog_name=item.Animal.name,
+                        time=item.Event.time,
+                        topic=item.Event.topic,
+                        doc_name=item.Doc.name,
+                        notes=item.Event.notes,
+                        id=item.Event.id,
+                        color=item.Animal.color
+                    ) }}
+                {% endfor %}
+            </div>
+
+            <p class="event-listing__title">Deine vergangenen Termine.</p>
+            <p class="event-listing__subtitle">Alles nötige gesichert und gespeichert.</p>
+
+            <div class="event-listing__items">
+                {% for item in past_events %}
+                    {{ event_item_short(
+                        dog_name=item.Animal.name,
+                        time=item.Event.time,
+                        topic=item.Event.topic,
+                        id=item.Event.id,
+                        color=item.Animal.color
+                    ) }}
+                {% endfor %}
+            </div>
 
         </div>
     </div>

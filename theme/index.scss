@@ -22,6 +22,7 @@
 @import 'scss/_components/animal-listing-item';
 @import 'scss/_components/flying-button';
 @import 'scss/_components/privacy';
+@import 'scss/_components/imprint';
 
 @import 'scss/_modules/onboarding';
 @import 'scss/_modules/guide-module';
@@ -34,16 +35,19 @@
 @import 'common.blocks/iconlist/__icon/iconlist__icon';
 @import 'common.blocks/iconlist/__text/iconlist__text';
 
-@import 'common.blocks/doclisting/doclisting';
-@import 'common.blocks/doclisting/__docitem/doclisting__docitem';
+@import 'common.blocks/doc-listing/doc-listing';
+@import 'common.blocks/doc-listing/__doc-item/doc-listing__doc-item';
+@import 'common.blocks/doc-listing/__items/doc-listing__items';
+@import 'common.blocks/doc-listing/__title/doc-listing__title';
+@import 'common.blocks/doc-listing/__subtitle/doc-listing__subtitle';
 
-@import 'common.blocks/docitem/docitem';
-@import 'common.blocks/docitem/__inside/docitem__inside';
-@import 'common.blocks/docitem/__city/docitem__city';
-@import 'common.blocks/docitem/__name/docitem__name';
-@import 'common.blocks/docitem/__street/docitem__street';
-@import 'common.blocks/docitem/__iconlist/docitem__iconlist';
-@import 'common.blocks/docitem/__iconlist/__text/docitem__iconlist__text';
+@import 'common.blocks/doc-item/doc-item';
+@import 'common.blocks/doc-item/__inside/doc-item__inside';
+@import 'common.blocks/doc-item/__city/doc-item__city';
+@import 'common.blocks/doc-item/__name/doc-item__name';
+@import 'common.blocks/doc-item/__street/doc-item__street';
+@import 'common.blocks/doc-item/__iconlist/doc-item__iconlist';
+@import 'common.blocks/doc-item/__iconlist/__text/doc-item__iconlist__text';
 
 @import 'common.blocks/doc-details/__stage/doc-details__stage';
 @import 'common.blocks/doc-details/__stage-image/doc-details__stage-image';
@@ -55,17 +59,6 @@
 @import 'common.blocks/doc-details/__iconlist/__text/doc-details__iconlist__text';
 @import 'common.blocks/doc-details/__button/doc-details__button';
 
-@import 'common.blocks/eventlisting/eventlisting';
-@import 'common.blocks/eventlisting/__eventitem/eventlisting__eventitem';
-@import 'common.blocks/eventlisting/__text/event-listing__text';
-
-@import 'common.blocks/eventitem/eventitem';
-@import 'common.blocks/eventitem/__inside/eventitem__inside';
-@import 'common.blocks/eventitem/__name/eventitem__name';
-@import 'common.blocks/eventitem/__date/eventitem__date';
-@import 'common.blocks/eventitem/__notes/eventitem__notes';
-@import 'common.blocks/eventitem/__topic/eventitem__topic';
-
 @import 'common.blocks/event-details/__button/event-details__button';
 @import 'common.blocks/event-details/__content/event-details__content';
 @import 'common.blocks/event-details/__date/event-details__date';
@@ -76,3 +69,22 @@
 @import 'common.blocks/event-details/__stage/event-details__stage';
 @import 'common.blocks/event-details/__stage-image/event-details__stage-image';
 @import 'common.blocks/event-details/__topic/event-details__topic';
+
+@import 'common.blocks/event-item-short/__content/event-item-short__content';
+@import 'common.blocks/event-item-short/__dog-name/event-item-short__dog-name';
+@import 'common.blocks/event-item-short/__link-wrapper/event-item-short__link-wrapper';
+@import 'common.blocks/event-item-short/__overlay/event-item-short__overlay';
+@import 'common.blocks/event-item-short/__time/event-item-short__time';
+@import 'common.blocks/event-item-short/__topic/event-item-short__topic';
+
+@import 'common.blocks/event-item-large/__content/event-item-large__content';
+@import 'common.blocks/event-item-large/__dog-name/event-item-large__dog-name';
+@import 'common.blocks/event-item-large/__notes-container/event-item-large__notes-container';
+@import 'common.blocks/event-item-large/__notes-title/event-item-large__notes-title';
+@import 'common.blocks/event-item-large/__notes/event-item-large__notes';
+@import 'common.blocks/event-item-large/__overlay/event-item-large__overlay';
+@import 'common.blocks/event-item-large/__time/event-item-large__time';
+@import 'common.blocks/event-item-large/__topic/event-item-large__topic';
+@import 'common.blocks/event-item-large/__wrapper/event-item-large__wrapper';
+
+@import 'common.blocks/event-listing/event-listing';
