@@ -12,5 +12,22 @@
 {% endmacro %}
 
 {% macro event_item_large(dog_name, time, topic, doc_name, notes, id, color) %}
+    <div class="event-item-large">
+        <a class="event-item-large__wrapper" href="{{ url_for('event.details', event_id=id) }}">
+            <div class="event-item-large__overlay" style="background-color: {{ color }};"></div>
+            <div class="event-item-large__content">
+                <p style="color: {{ color }}" class="event-item-large__dog-name">{{ dog_name }}</p>
+                <p style="color: {{ color }}" class="event-item-large__time">{{ time }}</p>
+                <p style="color: {{ color }}" class="event-item-large__topic">{{ topic }} bei {{ doc_name }}</p>
 
+                {% if notes and notes != '' %}
+                    <div class="event-item-large__notes-container">
+                        <p style="color: {{ color }}" class="event-item-large__notes-title">Beschreibung:</p>
+                        <p style="color: {{ color }}" class="event-item-large__notes">{{ notes }}</p>
+                    </div>
+                {% endif %}
+
+            </div>
+        </a>
+    </div>
 {% endmacro %}
