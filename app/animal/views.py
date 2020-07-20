@@ -89,8 +89,13 @@ def update(animal_id):
         'label': animal['label']
     } for animal in AnimalTypes.get_types()]
     colors = ('#6067EE', '#20AB62', '#F77161', '#FE9055', '#FDBB45')
+
     date = animal_or_none.birthdate.split('.')
-    animal_or_none.birthdate = '{}-{}-{}'.format(date[2], date[1], date[0])
+    try:
+        animal_or_none.birthdate = '{}-{}-{}'.format(date[2], date[1], date[0])
+    except:
+        pass
+    
     return render_template('/animals/update.html',
                            colors=colors,
                            types=types,
