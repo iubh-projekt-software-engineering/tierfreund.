@@ -159,8 +159,6 @@ def details(event_id):
 
 @mod.route('/loeschen/<int:event_id>', methods=['POST'])
 def delete(event_id):
-    print(event_id)
-    print('Ebentid: {}'.format(Event.id))
     event_or_none = db.session.query(Event,
                                      Animal,
                                      Doc).join(Animal).join(Doc).filter(
