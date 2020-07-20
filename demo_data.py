@@ -23,7 +23,7 @@ if __name__ == '__main__':
     animals = ({
         'name': 'Struppy',
         'type': 1,
-        'color': 'rgba(253, 187, 69, 1)',
+        'color': '#fdbb45',
         'race': 'Mischling',
         'birthdate': '10.10.2010',
         'weight': 70,
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     }, {
         'name': 'Susanne',
         'type': 2,
-        'color': 'rgba(247, 113, 97, 1)',
+        'color': '#f77161',
         'race': 'Mischling',
         'birthdate': '10.10.2010',
         'weight': 70,
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     }, {
         'name': 'Ben',
         'type': 3,
-        'color': 'rgba(32, 171, 98, 1)',
+        'color': '#20ab62',
         'race': 'Mischling',
         'birthdate': '10.10.2010',
         'weight': 70,
@@ -50,7 +50,7 @@ if __name__ == '__main__':
     }, {
         'name': 'Frank',
         'type': 4,
-        'color': 'rgba(214, 86, 15, 1)',
+        'color': '#d6560f',
         'race': 'Mischling',
         'weight': 70,
         'birthdate': '10.10.2010',
@@ -59,7 +59,7 @@ if __name__ == '__main__':
     }, {
         'name': 'Henry',
         'type': 1,
-        'color': 'rgba(253, 187, 69, 1)',
+        'color': '#fdbb45',
         'race': 'Mischling',
         'birthdate': '10.10.2010',
         'weight': 70,
@@ -68,7 +68,7 @@ if __name__ == '__main__':
     }, {
         'name': 'Carl',
         'type': 2,
-        'color': 'rgba(247, 113, 97, 1)',
+        'color': '#f77161',
         'race': 'Mischling',
         'birthdate': '10.10.2010',
         'weight': 70,
@@ -77,7 +77,7 @@ if __name__ == '__main__':
     }, {
         'name': 'Mai',
         'type': 3,
-        'color': 'rgba(32, 171, 98, 1)',
+        'color': '#20ab62',
         'race': 'Mischling',
         'birthdate': '10.10.2010',
         'weight': 70,
@@ -86,7 +86,7 @@ if __name__ == '__main__':
     }, {
         'name': 'Lydia',
         'type': 4,
-        'color': 'rgba(214, 86, 15, 1)',
+        'color': '#d6560f',
         'race': 'Mischling',
         'weight': 70,
         'birthdate': '10.10.2010',

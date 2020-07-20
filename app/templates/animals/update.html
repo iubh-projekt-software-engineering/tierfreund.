@@ -10,7 +10,6 @@
             {{ select('type', types, required=True, value=item.type) }}
             {{ text('race', 'Rasse eingeben', value=item.race) }}
             {{ float('weight', 'Gewicht eingeben', value=item.weight) }}
-            {{item.birthdate}}
             {{ date('birthdate', value=item.birthdate) }}
             {{ textarea('notes', 'Notizen eingeben', value=item.notes) }}
             {{ color('color', colors, value=item.color, required=True) }}
