@@ -17,7 +17,7 @@
             <div class="event-item-large__overlay" style="background-color: {{ color }};"></div>
             <div class="event-item-large__content">
                 <p style="color: {{ color }}" class="event-item-large__dog-name">{{ dog_name }}</p>
-                <p style="color: {{ color }}" class="event-item-large__time">{{ time }}</p>
+                <p style="color: {{ color }}" class="event-item-large__time">{{ time.strftime('%d.%m.%Y %H:%M Uhr') }}</p>
                 <p style="color: {{ color }}" class="event-item-large__topic">{{ topic }} bei {{ doc_name }}</p>
 
                 {% if notes and notes != '' %}
