@@ -161,9 +161,7 @@ def details(event_id):
 
 @mod.route('/loeschen/<int:event_id>', methods=['POST'])
 def delete(event_id):
-    event_or_none = db.session.query(Event,
-                                     Animal,
-                                     Doc).join(Animal).join(Doc).filter(
+    event_or_none = db.session.query(Event).join(Animal).join(Doc).filter(
         Event.id == event_id, Animal.user_id == current_user.id
     ).one_or_none()
 
@@ -172,7 +170,7 @@ def delete(event_id):
         return redirect(url_for('event.details', event_id=event_id))
 
     try:
-        db.session.delete(event_or_none[0])
+        db.session.delete(event_or_none)
         db.session.commit()
         flash('Event erfolgreich gelöscht.')
     except Exception as e:
