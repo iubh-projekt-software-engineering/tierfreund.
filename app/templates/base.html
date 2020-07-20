@@ -3,13 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HTML5 Datetime-local polyfill</title>
-    <meta name="author" content="Jonathan Stipe" />
-    <meta name="copyright" content="&copy; 2012 Jonathan Stipe" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="http://www.modernizr.com/downloads/modernizr-latest.js"></script>
-    <script type="text/javascript" src="datetime-local-polyfill.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='datetime-local-polyfill.js')}}"></script>
     <script type="text/javascript">
 //<![CDATA[
 $(function() {
@@ -32,9 +29,9 @@ $(function() {
     </script>
     <title>{{ config['APP_NAME'] }}</title>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery.ui.all.css" />
-    <link rel="stylesheet" href="datetime-local-polyfill.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='datetime-local-polyfill.css') }}" />
     <link rel="stylesheet" href="https://use.typekit.net/wcb4ril.css">
-    <link rel="stylesheet" href="{{url_for('static', filename='bundle.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bundle.css')}}">
     <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='apple-icon-57x57.png')}}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='apple-icon-60x60.png')}}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='apple-icon-72x72.png')}}">
