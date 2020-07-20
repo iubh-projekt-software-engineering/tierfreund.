@@ -151,6 +151,8 @@ def details(event_id):
         flash('Das Event konnte leider nicht gefunden werden.')
         return redirect(url_for('event.index'))
 
+    print('event: {}'.format(event_or_none))
+
     return render_template(
         '/events/details.html',
         item=event_or_none
@@ -159,8 +161,8 @@ def details(event_id):
 
 @mod.route('/loeschen/<int:event_id>', methods=['POST'])
 def delete(event_id):
-    event_or_none = db.session.query(Event).filter_by(
-        id=event_id, user_id=current_user.id
+    event_or_none = db.session.query(Event).join(Animal).join(Doc).filter(
+        Event.id == event_id, Animal.user_id == current_user.id
     ).one_or_none()
 
     if event_or_none is None:
