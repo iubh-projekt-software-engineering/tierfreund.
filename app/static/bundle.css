@@ -313,7 +313,6 @@ input[type="password"] {
   padding-right: 60px; }
 
 input[type="submit"] {
-  margin-top: 50px;
   cursor: pointer;
   font-size: 20px; }
 
@@ -664,7 +663,7 @@ input, select {
 
 .onboarding--stage .image {
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   margin: 0 auto 50px auto;
   text-align: center; }
 
@@ -674,13 +673,13 @@ input, select {
   height: auto; }
 
 .onboarding--stage .title {
-  font-size: 30px;
+  font-size: 22px;
   font-family: sofia-pro, sans-serif;
   font-weight: 700;
   font-style: normal; }
 
 .onboarding--stage .subtitle {
-  font-size: 18px;
+  font-size: 16px;
   font-family: sofia-pro, sans-serif;
   font-weight: 700;
   font-style: normal; }
@@ -690,7 +689,7 @@ input, select {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 40px;
+  padding: 20px;
   padding-bottom: 80px;
   display: flex;
   justify-content: space-between;
