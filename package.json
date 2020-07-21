@@ -37,6 +37,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
+    "pickerjs": "^1.2.1",
     "toastr": "^2.1.4"
   }
 }

@@ -1,7 +1,11 @@
 import Stepmation from './stepmation';
 import toastr from 'toastr';
+import Picker from 'pickerjs';
 
-
+Array.from(document.querySelectorAll('.js--fullpicker')).forEach((el) => {
+    const _picker = new Picker(el);
+    console.log(_picker);
+});
 
 if (window.toastMessages) {
     window.toastMessages.forEach((message) => {

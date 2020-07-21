@@ -25,7 +25,7 @@
 
 {% macro datetime(name, placeholder, required=False, value=None) %}
   <div class="form-field">
-    <input {% if value %}value="{{ value }}"{% endif %} {% if required %}required{% endif %} name="{{ name }}" type="datetime-local" placeholder="{{ placeholder }}{% if required %}*{% endif %}" />
+    <input class="js--fullpicker" {% if value %}value="{{ value }}"{% endif %} {% if required %}required{% endif %} name="{{ name }}" type="text" placeholder="{{ placeholder }}{% if required %}*{% endif %}" />
   </div>
 {% endmacro %}
 
