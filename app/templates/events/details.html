@@ -15,7 +15,7 @@
         <div class="event-detail__content">
 
           <p class="event-detail__dog-name">{{ item.Animal.name }}</p>
-          <p class="event-detail__time">{{ item.Event.time }}</p>
+          <p class="event-detail__time">{{ item.Event.time.strftime('%d.%m.%Y %H:%M Uhr') }}</p>
           <p class="event-detail__topic">{{ item.Event.topic }} bei {{ item.Doc.name }}</p>
 
           {% if item.Event.notes %}
