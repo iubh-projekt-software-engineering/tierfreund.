@@ -2,10 +2,14 @@
 # -*- encoding: utf-8 -*-
 
 if __name__ == '__main__':
+    from datetime import datetime, timedelta
+    import random
+
     from app import db
     from app.user.models import User
     from app.animal.model import Animal
     from app.doc.model import Doc
+    from app.event.model import Event
 
     new_user = User(
         username='demo',
@@ -112,15 +116,26 @@ if __name__ == '__main__':
         'user_id': new_user.id
     })
 
+    events = ({
+        'topic': 'Impfung',
+        'notes': 'Es steht wieder eine Impfung an'
+    }, {
+        'topic': 'Wurmkur',
+        'notes': 'Es findet eine Wurmkur statt'
+    })
+
+    created_animals = []
     for animal in animals:
         try:
             new_animal = Animal(**animal)
             db.session.add(new_animal)
+            created_animals.append(new_animal)
             db.session.commit()
         except Exception as e:
             print(e)
             pass
 
+    created_docs = []
     for doc in docs:
         try:
             new_doc = Doc(**doc)
@@ -129,3 +144,23 @@ if __name__ == '__main__':
         except Exception as e:
             print(e)
             pass
+    now = datetime.now()
+
+    for animal in created_animals:
+        for event in events:
+            new_event = Event(
+                topic=event['topic'],
+                notes=event['notes'],
+                animal_id=animal.id,
+                doc_id=1,
+                time=(now + timedelta(days=+random.randint(100, 200)))
+            )
+            try:
+                db.session.add(new_event)
+                db.session.commit()
+                print(new_event)
+            except Exception as e:
+                print(e)
+                pass
+        
+        
