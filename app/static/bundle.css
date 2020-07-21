@@ -664,7 +664,8 @@ input, select {
 
 .onboarding--stage .image {
   width: 100%;
-  margin-bottom: 50px;
+  max-width: 300px;
+  margin: 0 auto 50px auto;
   text-align: center; }
 
 .onboarding--stage img {
@@ -673,13 +674,13 @@ input, select {
   height: auto; }
 
 .onboarding--stage .title {
-  font-size: 50px;
+  font-size: 30px;
   font-family: sofia-pro, sans-serif;
   font-weight: 700;
   font-style: normal; }
 
 .onboarding--stage .subtitle {
-  font-size: 22px;
+  font-size: 18px;
   font-family: sofia-pro, sans-serif;
   font-weight: 700;
   font-style: normal; }
@@ -690,6 +691,7 @@ input, select {
   left: 0;
   width: 100%;
   padding: 40px;
+  padding-bottom: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center; }
